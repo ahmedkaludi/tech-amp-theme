@@ -147,7 +147,15 @@
     background-repeat: no-repeat;
     top: 10px;
 }
-
+.amp-main-menu ul li.menu-item-has-children:hover:after{
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+    top: -10px;
+    right: 20px;
+}
 .amp-main-menu{
     margin-top:30px;
 }
