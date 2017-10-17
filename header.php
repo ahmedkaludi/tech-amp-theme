@@ -23,15 +23,18 @@
     </div>
 </header>
 
-
-<?php amp_sidebar(['action'=>'start',
-    'id'=>'sidebar',
-    'layout'=>'nodisplay',
-    'side'=>'right'
-] ); ?>
-<?php amp_sidebar(['action'=>'close-button']); ?>
-<?php amp_menu(); ?>
-<?php amp_social(); ?> 
-<?php amp_sidebar(['action'=>'end']); ?>
-
+<div class="amp-menu-sidebar">
+    <?php amp_sidebar(['action'=>'start',
+        'id'=>'sidebar',
+        'layout'=>'nodisplay',
+        'side'=>'right'
+    ] ); ?>
+    <div class="amp-close-btn">
+        <?php amp_sidebar(['action'=>'close-button']); ?>
+    </div>
+    <div class="amp-main-menu">
+        <?php amp_menu(); ?>
+    </div><!-- /.amp-menu -->
+    <?php amp_sidebar(['action'=>'end']); ?>
+</div>
 <div class="content-wrapper container">
