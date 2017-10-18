@@ -450,6 +450,57 @@
         width: 100px;
         margin: 0px 10px 0px 0px;
     }
+/*** --- single - post ***/
+.single-featured-image-post{
+    width:100%;
+    position:relative;
+}
+.single-featured-image{
+    position: relative;
+}
+.single-post-title{
+    position: absolute;
+    top: auto;
+    bottom: 20px;
+    left:20px;
+    right:20px;
+}
+.single-post-title h1{
+    margin: 0;
+    font-size: 26px;
+    line-height: 32px;
+    color: #ffffff;
+    font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
+}
+.single-post-content p{
+    font-size: 15px;
+    line-height: 23px;
+    font-family: 'Open Sans', sans-serif;
+    color: #000;
+}
+.post-author {
+    font-size:14px;
+    font-family: 'Open Sans', sans-serif;
+}
+.post-author .amp-author amp-img{
+    float:left;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+.post-author .amp-author strong {
+    font-size: 16px;
+    display: block;
+    font-family: 'Open Sans', sans-serif;
+}
+.single-post-category-list .amp-category{
+    width:100%;
+    background-color:#ccc;
+    display:inline-block;
+}
+.single-post-category-list .amp-category > span{
+    display:block;
+}
 
 
 /**** 

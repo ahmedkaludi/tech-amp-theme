@@ -1,11 +1,21 @@
 <?php amp_header(); ?>
-<?php amp_title(); ?>
-<?php amp_featured_image();?>
-<?php amp_content(); ?>
-<?php amp_post_pagination();?>
-<?php amp_author_box(); ?>
-<?php amp_social(array('twitter'));?>
-<?php amp_categories_list();?>
+<div class="single-featured-image-post">
+	<div class="single-featured-image">
+		<?php amp_featured_image();?>
+	</div><!-- /.single-featured-image -->
+	<div class="single-post-title">
+		<?php amp_title(); ?>
+	</div><!-- /.single-post-title -->
+</div><!-- /.single-featured-image-post -->
+<div class="single-post-content">
+	<?php amp_content(); ?>
+</div><!-- /.single-post-content -->
+<div class="post-author">
+	<?php amp_author_box(); ?>
+</div><!-- /.post-author -->
+<div class="single-post-category-list">
+	<?php amp_categories_list();?>
+</div><!-- /.single-post-category-list -->
 <?php amp_tags_list();?>
 <?php amp_comments();?>
 <?php amp_post_navigation();?>
