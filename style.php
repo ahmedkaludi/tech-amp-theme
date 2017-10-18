@@ -114,7 +114,7 @@
 *****/
     #sidebar{
         background-color:rgba(0,0,0,.9);
-        z-index:0;
+        
     }
     .amp-main-menu > ul > li > a{
         color:#ffffff;
@@ -164,6 +164,7 @@
         float: right;
         position: relative;
         right: 22px;
+        cursor: pointer;
     }
     .amp-sidebar-toggle {
         cursor: pointer;
@@ -178,7 +179,6 @@
         width:100%;
         clear:both;
         display:inline-block;
-        z-index:-1;
     }
     .left-nav{
         float:left;
@@ -190,7 +190,7 @@
         float: left;
         width: 70%;
         text-align: center;
-        z-index:9;
+        z-index:1;
         position:relative;
     }
     .logo-amp h1{
@@ -285,7 +285,7 @@
         top: 0;
         bottom: 0;
         left:0;
-        z-index:0;
+        z-index:1;
     }
     .lightbox-target:target img {
         max-height: 100%;
@@ -342,33 +342,38 @@
     .loop-post{
         display: inline-block;
         width: 100%;
-        margin: 6px 0px;
+        position:relative;
     }
     .loop-post .loop-img{
         float: left;
         margin-right: 15px;
     }
     .loop-post h2{
-        font-size: 1.2em;
-        margin: 0px 0px 8px 0px;
+        font-size: 26px;
+        margin: 0px;
+        line-height: 30px;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 400;
     }
-    .loop-post p{
-        font-size: 14px;
-        color: #333;
-        margin-bottom:6px;
+    .loop-post h2 a{
+        color:#ffffff;
     }
     .loop-post ul{
         list-style-type: none;
         display: inline-flex;
         margin: 0px;
-        font-size: 14px;
-        color: #666;
+        margin-bottom:10px;
     }
     .loop-post ul li{
-        margin-right:2px;
-    }
-    .loop-date{
-        font-size:12px;
+        margin-right: 8px;
+        background: #B80000;
+        color: #ffffff;
+        padding: 5px 10px;
+        font-size: 10px;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
     }
 
 /*** loop - styles ***/
@@ -380,16 +385,53 @@
     z-index:-1;
 }
 .loop-wrapper .loop-post .featured-image .loop-img{
-    position: relative;
     width: 100%;
 }
 .loop-img a{
     display:block;
     line-height:0;
 }
+.featured-image-post-content{
+    position: absolute;
+    top: auto;
+    bottom: 30px;
+    left: 20px;
+    right: 20px;
+}
+.loop-wrapper .loop-post:nth-child(1) .featured-image{
+    position:relative;
+    width:100%;
+    display:inline-block;
+}
+.loop-wrapper .loop-post:nth-child(1) .featured-image .loop-img{
+    background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 30%, rgba(0, 0, 0, .7) 100%) repeat scroll 0 0;
+}
 
-
-
+/****
+* Pagination
+*****/
+.loop-pagination{
+    margin-top:20px;
+}
+.loop-pagination .right, .loop-pagination .left{
+    background-color: #B80000;
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    float: none;
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 7px;
+    font-weight: 600;
+}
+.loop-pagination .left {
+    margin-top:10px;
+}
+.loop-pagination .right a, .loop-pagination .left a{
+    color:#ffffff;
+    display: block;
+    padding: 10px;
+}
 
 /****
 * Single
