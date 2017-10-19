@@ -1,7 +1,7 @@
 /**** 
 * AMP Framework Reset
 *****/
-    body{ font-family: sans-serif; font-size: 16px; line-height:1.4; }
+    body{ font-family: 'Open Sans', sans-serif; font-size: 16px; line-height:1.4; }
     ol, ul{ list-style-position: inside }
     p, ol, ul, figure{ margin: 0 0 1em; padding: 0; }
     a, a:active, a:visited{ color:#ed1c24; text-decoration: none }
@@ -344,18 +344,14 @@
         width: 100%;
         position:relative;
     }
-    .loop-post .loop-img{
-        float: left;
-        margin-right: 15px;
-    }
-    .loop-post h2{
+    .loop-post .featured-image-post-content h2{
         font-size: 26px;
         margin: 0px;
         line-height: 30px;
         font-family: 'Open Sans', sans-serif;
         font-weight: 400;
     }
-    .loop-post h2 a{
+    .loop-post .featured-image-post-content h2 a{
         color:#ffffff;
     }
     .loop-post ul{
@@ -364,7 +360,7 @@
         margin: 0px;
         margin-bottom:10px;
     }
-    .loop-post ul li{
+    .loop-post .featured-image-post-content ul li{
         margin-right: 8px;
         background: #B80000;
         color: #ffffff;
@@ -377,10 +373,6 @@
     }
 
 /*** loop - styles ***/
-.loop-wrapper .loop-post:nth-child(1) .loop-img{
-    width:100%;
-    margin-right:0;
-}
 .loop-wrapper .loop-img amp-img img{
     z-index:-1;
 }
@@ -398,39 +390,88 @@
     left: 20px;
     right: 20px;
 }
-.loop-wrapper .loop-post:nth-child(1) .featured-image{
+.loop-wrapper .loop-post .featured-image{
     position:relative;
     width:100%;
     display:inline-block;
 }
-.loop-wrapper .loop-post:nth-child(1) .featured-image .loop-img{
+.loop-wrapper .loop-post .featured-image .loop-img{
     background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 30%, rgba(0, 0, 0, .7) 100%) repeat scroll 0 0;
 }
-
+.featured-image-post-content .amp-author-info{
+    font-size:13px;
+    font-weight:400;
+    margin-top:2px;
+    color:#ffffff;
+    padding-top:10px;
+}
+.featured-image-small-post-content .amp-author-info{
+    font-size: 11px;
+    font-weight: 300;
+    margin-top: 3px;
+}
+.featured-image-small-posts .loop-img{
+    width:90px;
+    margin-right:10px;
+}
+.featured-image-small-posts{
+    float:left;
+}
+.featured-image-small-post-content .loop-title {
+    font-size: 15px;
+    line-height: 20px;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+}
+.featured-image-small-post-content .loop-title a{
+    color:#000;
+}
+.featured-image-small-post-content .loop-category {
+    position: relative;
+    top: -4px;
+    margin-bottom: 2px;
+}
+.featured-image-small-post-content{
+    width:66%;
+    float:left;
+}
+.small-post-list{
+    margin-bottom:15px;
+    border-top:1px solid #eee;
+}
+.loop-post .featured-image-small-post-content ul li {
+    margin-right: 5px;
+    background: #B80000;
+    color: #ffffff;
+    padding: 1px 5px 2px 5px;
+    border-radius: 3px;
+    font-size: 10px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+}
 /****
 * Pagination
 *****/
-.loop-pagination{
-    margin-top:20px;
-}
 .loop-pagination .right, .loop-pagination .left{
     background-color: #B80000;
-    font-size: 14px;
+    font-size: 13px;
     font-family: 'Open Sans', sans-serif;
     float: none;
-    width: 70%;
+    width: 100%;
     margin: 0 auto;
     text-align: center;
-    border-radius: 7px;
+    border-radius: 3px;
     font-weight: 600;
 }
 .loop-pagination .left {
-    margin-top:10px;
+    margin-top:6px;
 }
 .loop-pagination .right a, .loop-pagination .left a{
     color:#ffffff;
     display: block;
-    padding: 10px;
+    padding: 7px 0px 8px 0px;
 }
 
 /****
@@ -453,35 +494,21 @@
 /*** --- single - post ***/
 .single-featured-image-post{
     width:100%;
-    position:relative;
-}
-.single-featured-image{
-    position: relative;
-}
-.single-post-title{
-    position: absolute;
-    top: auto;
-    bottom: 20px;
-    left:20px;
-    right:20px;
 }
 .single-post-title h1{
     margin: 0;
     font-size: 26px;
-    line-height: 32px;
-    color: #ffffff;
-    font-weight: 400;
-    font-family: 'Open Sans', sans-serif;
+    line-height: 34px;
+    color: #000000;
+    font-weight: 300;
 }
 .single-post-content p{
     font-size: 15px;
     line-height: 23px;
-    font-family: 'Open Sans', sans-serif;
     color: #000;
 }
 .post-author {
     font-size:14px;
-    font-family: 'Open Sans', sans-serif;
 }
 .post-author .amp-author amp-img{
     float:left;
@@ -491,15 +518,94 @@
 .post-author .amp-author strong {
     font-size: 16px;
     display: block;
+    font-weight:600;
+}
+.single-post-title p{
+    font-size: 16px;
     font-family: 'Open Sans', sans-serif;
+    color: #000;
+    margin-top: 6px;
 }
-.single-post-category-list .amp-category{
+.posted-author{
     width:100%;
-    background-color:#ccc;
+    clear:both;
     display:inline-block;
+    margin-bottom:20px;
 }
-.single-post-category-list .amp-category > span{
+.posted-author-image{
+    float: left;
+    margin-right: 10px;
+}
+.posted-author-details span{
     display:block;
+    font-size:12px;
+    color:#333;
+}
+.posted-author-details .author-name{
+    margin-bottom:2px;
+}
+.posted-author-details .author-name a{
+    font-size:14px;
+    color:#000;
+    font-weight:600;
+    padding-left:5px;
+}
+.single-post-category-list .amp-category, .single-post-tags-list .amp-tags{
+    width: 100%;
+    display: inline-block;
+    margin-top: 25px;
+    border-top: 1px solid #eee;
+    padding-top: 17px;;
+}
+.single-post-category-list .amp-category > span, .single-post-tags-list .amp-tags > span{
+    display: block;
+    text-transform: uppercase;
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+.single-post-category-list .amp-category span a, .single-post-tags-list .amp-tags span a{
+    float: left;
+    font-size: 12px;
+    padding: 6px 10px;
+    border: 1px solid #BDBDBD;
+    border-radius: 3px;
+    margin: 5px 5px 0px 0px;
+    text-transform: none;
+    color: #777;
+    font-weight: 400;
+}
+.single-related-posts {
+    margin-top: 25px;
+}
+ .single-related-posts h3{
+    margin: 0;
+    font-size: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #eee;
+    font-weight: bold;
+    margin-bottom:20px;
+}
+.single-related-posts h3:after{
+    content: "";
+    display: block;
+    width: 125px;
+    border-bottom: 2px solid #da0000;
+    position: relative;
+    top: 12px;
+}
+.single-related-posts .amp-related-posts li{
+    margin-bottom:20px;
+}
+.single-related-posts .amp-related-posts li .related_link{
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 400;
+}
+.single-related-posts .amp-related-posts li .related_link a{
+    color:#000;
+}
+.single-related-posts .amp-related-posts li .related_link p{
+    display:none;
 }
 
 
@@ -507,8 +613,8 @@
 * Comments
 *****/
 	.comments_list ul{
-	    margin:0;
-	    padding:0
+	    margin:20px 0px 0px 0px
+	    padding:0;
 	}
 	.comments_list ul.children{
 	    padding-bottom:10px;
@@ -536,7 +642,61 @@
 	.comments_list li li li{
 	    margin:20px 20px 10px 20px
 	}
-	.comment-author{ float:left }
+	
+
+/*** Commnets -part ***/
+.comments-part{
+    width:100%;
+    display:inline-block;
+    clear:both;
+    margin-top:30px;
+}
+.comments-part h3{
+    margin: 0;
+    font-size: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #eee;
+    font-weight: bold;
+}
+.comments-part h3:after{
+    content: "";
+    display: block;
+    width: 125px;
+    border-bottom: 2px solid #da0000;
+    position: relative;
+    top: 12px;
+}
+.comments-part ul{
+    margin-top:16px;
+}
+.comments-part ul li{
+    list-style:none;
+    margin-bottom:25px;
+}
+.comments-part .comment-author.vcard .says{
+    display:none;
+}
+.comments-part  .comment-author.vcard .fn{
+    font-size: 14px;
+    font-weight: 600;
+    color: #111;
+}
+.comments-part .comment-metadata{
+    font-size: 11px;
+    font-weight: normal;
+}
+.comments-part .comment-metadata a{
+    color: #333;
+}
+.comment-content{
+    margin-top:5px;
+}
+.comment-content p{
+    font-size: 14px;
+    color: #000;
+    line-height: 21px;
+}
+
 
 
 /**** 
