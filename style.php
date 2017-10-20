@@ -73,6 +73,7 @@
     /* AMP Sidebar Toggle button */
     .amp-sidebar-button{
         position:relative;
+        z-index:1;
     }
     .amp-sidebar-toggle  {
     }
@@ -81,7 +82,7 @@
         height: 2px;
         margin-bottom: 5px;
         width: 22px;
-        background: #000;
+        background: #fff;
     }
     .amp-sidebar-toggle span:nth-child(2){
         top: 7px;
@@ -103,6 +104,7 @@
         position: relative;
         top: 10px;
     }
+
      .amp-sidebar-close:hover:after{
         transform: rotate(180deg);
     }
@@ -174,16 +176,12 @@
 /**** 
 * Header -logo
 *****/
-    .amp-index .header-part{
-        display:none;
-    }
-    .amp-index .featured-image-big-post .header-part{
-        display:block;
-    }
+    
     .header-part{
         width:100%;
         clear:both;
-        display:inline-block;
+        display:inline;
+        margin-bottom:20px;
     }
     .left-nav{
         float:left;
@@ -195,7 +193,7 @@
         float: left;
         width: 70%;
         text-align: center;
-        z-index:1;
+        z-index:2;
         position:relative;
     }
     .logo-amp h1{
@@ -206,6 +204,7 @@
         float: right;
         position: relative;
         top: 15px;
+        z-index:1;
     }
 
 /*** Light Box ***/
@@ -388,13 +387,20 @@
     display:block;
     line-height:0;
 }
+.featured-image-wrapper{
+    margin-bottom:-50px;
+}
 .featured-image-big-post{
     position:relative;
+    top:-50px;
 }
 .featured-image-big-post .header-part{
     position: absolute;
     top: 0;
     bottom: auto;
+}
+.featured-image-big-post .right-search {
+    right: 20px;
 }
 .featured-image-post-content{
     position: absolute;
@@ -417,6 +423,12 @@
     margin-top:2px;
     color:#ffffff;
     padding-top:10px;
+}
+.featured-image-post-content .amp-author-info a{
+    color:#fff;
+}
+.featured-image-small-post-content .amp-author-info a{
+    font-weight:bold;
 }
 .featured-image-small-post-content .amp-author-info{
     font-size: 11px;
@@ -505,6 +517,13 @@
         margin: 0px 10px 0px 0px;
     }
 /*** --- single - post ***/
+.single-postamp-single .featured-image-big-post{
+    display:none;
+}
+.single-featured-image{
+    display:inline-block;
+    width:100%;
+}
 .featured-small-posts{
     width:100%;
     display:inline-block;
