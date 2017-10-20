@@ -174,7 +174,12 @@
 /**** 
 * Header -logo
 *****/
-
+    .amp-index .header-part{
+        display:none;
+    }
+    .amp-index .featured-image-big-post .header-part{
+        display:block;
+    }
     .header-part{
         width:100%;
         clear:both;
@@ -382,6 +387,14 @@
 .loop-img a{
     display:block;
     line-height:0;
+}
+.featured-image-big-post{
+    position:relative;
+}
+.featured-image-big-post .header-part{
+    position: absolute;
+    top: 0;
+    bottom: auto;
 }
 .featured-image-post-content{
     position: absolute;
