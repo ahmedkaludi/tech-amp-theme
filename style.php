@@ -492,6 +492,11 @@
         margin: 0px 10px 0px 0px;
     }
 /*** --- single - post ***/
+.featured-small-posts{
+    width:100%;
+    display:inline-block;
+    margin-top:20px;
+}
 .single-featured-image-post{
     width:100%;
 }
@@ -525,6 +530,7 @@
     font-family: 'Open Sans', sans-serif;
     color: #000;
     margin-top: 6px;
+    line-height:1.5;
 }
 .posted-author{
     width:100%;
@@ -588,7 +594,7 @@
 .single-related-posts h3:after{
     content: "";
     display: block;
-    width: 125px;
+    width: 92px;
     border-bottom: 2px solid #da0000;
     position: relative;
     top: 12px;
