@@ -36,9 +36,9 @@
 		<?php amp_tags_list();?>
 		</div><!-- /.single-post-tags-list -->
 		<div class="comments-part">
-		<?php amp_comments();?>
+			<?php amp_comments();?>
 		</div><!-- /.comments-part -->
-		<?php amp_post_navigation();?>
+			<?php amp_post_navigation();?>
 		<div class="single-related-posts">
 			<?php amp_related_posts(); ?>
 		</div><!-- /.related-posts -->
