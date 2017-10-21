@@ -350,6 +350,9 @@
         width: 100%;
         position:relative;
     }
+    .home_newpage .header{
+        background:#000;
+    }
     .loop-post .featured-image-post-content h2{
         font-size: 26px;
         margin: 0px;
@@ -586,6 +589,9 @@
     font-size: 15px;
     line-height: 23px;
     color: #000;
+}
+.amp-author amp-img{
+    border-radius:50%;
 }
 .post-author {
     font-size:14px;

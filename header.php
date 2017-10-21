@@ -1,4 +1,22 @@
-<?php amp_header_core() ?>
+<?php 
+if (get_query_var( 'paged' ) ) {
+            $paged = get_query_var('paged');
+        } elseif ( get_query_var( 'page' ) ) {
+            $paged = get_query_var('page');
+        } else {
+            $paged = 1;
+        } 
+if( $paged >1 && is_home()){
+
+add_filter("ampforwp_body_class",'my_custom_class_next_pages');
+}
+function my_custom_class_next_pages($previousClaases){
+
+    $previousClaases[] = 'home_newpage';
+    //print_r($previousClaases);die;
+    return  $previousClaases;
+}
+amp_header_core() ?>
 <div class="featured-image-wrapper">
  <header class="header container">
     <div class="header-part">
