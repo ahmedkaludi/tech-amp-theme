@@ -17,12 +17,18 @@
 				<span class="posted-time">Octember 19, 2017 4.00 AM PDT</span>
 			</div><!-- /.posted-author-details -->
 		</div><!-- /.posted-author -->
+
+		<div class="posted-author">
+			<div class="posted-author-image">
+			<?php 
+			$args = array('avatar_width'=>60,'avatar_height'=>50,"author_description"=>false);
+   			amp_author_box('', $args); ?>
+   			</div>
+		</div><!-- /.post-author -->
 		<div class="single-post-content">
 			<?php amp_content(); ?>
 		</div><!-- /.single-post-content -->
-		<div class="post-author">
-			<?php amp_author_box(); ?>
-		</div><!-- /.post-author -->
+		
 		<div class="single-post-category-list">
 			<?php amp_categories_list();?>
 		</div><!-- /.single-post-category-list -->

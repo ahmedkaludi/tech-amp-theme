@@ -188,6 +188,7 @@
         width:15%;
         position:relative;
         top:13px;
+        left:18px;
     }
     .logo-amp {
         float: left;
@@ -203,8 +204,9 @@
         text-align: right;
         float: right;
         position: relative;
-        top: 15px;
-        z-index:1;
+        z-index: 1;
+        padding: 12px 15px 0px 10px;
+
     }
 
 /*** Light Box ***/
@@ -525,6 +527,9 @@
 .amp-single-page{
     position: relative;
     top: -42px;
+    max-width: 600px;
+    margin: 0 auto;
+   
 }
 .single-featured-image{
     display:inline-block;
