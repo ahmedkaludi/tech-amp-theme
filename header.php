@@ -70,5 +70,5 @@
     }  ?>
 </div><!-- /.featured-image-big-post -->
 </div><!-- /.featured-image-wrapper -->
-<div class="content-wrapper container">
+<div class="content-wrapper">
 

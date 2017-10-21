@@ -393,6 +393,8 @@
 .featured-image-big-post{
     position:relative;
     top:-50px;
+    max-width: 600px;
+    margin: 0 auto;
 }
 .featured-image-big-post .header-part{
     position: absolute;
@@ -520,6 +522,10 @@
 .single-postamp-single .featured-image-big-post{
     display:none;
 }
+.amp-single-page{
+    position: relative;
+    top: -42px;
+}
 .single-featured-image{
     display:inline-block;
     width:100%;
@@ -646,7 +652,22 @@
     display:none;
 }
 
-
+/**** 
+* Archive
+*****/
+.amp-archive .featured-image-big-post{
+    display:none;
+}
+.amp-archive .header{
+    background:#000;
+}
+.amp-archive-title{
+    margin:0;
+    padding-bottom:15px;
+}
+.amp-archive .featured-small-posts{
+    margin-top:10px;
+}
 /**** 
 * Comments
 *****/
