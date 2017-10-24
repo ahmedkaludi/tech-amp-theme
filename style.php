@@ -512,26 +512,6 @@
 #pagination .next, #pagination .prev{
     margin-top:10px;
 }
-#pagination .next a:after{
-    content:"";
-    background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAxMjkgMTI5IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxMjkgMTI5IiB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4Ij4KICA8Zz4KICAgIDxwYXRoIGQ9Im0xMjEuMywzNC42Yy0xLjYtMS42LTQuMi0xLjYtNS44LDBsLTUxLDUxLjEtNTEuMS01MS4xYy0xLjYtMS42LTQuMi0xLjYtNS44LDAtMS42LDEuNi0xLjYsNC4yIDAsNS44bDUzLjksNTMuOWMwLjgsMC44IDEuOCwxLjIgMi45LDEuMiAxLDAgMi4xLTAuNCAyLjktMS4ybDUzLjktNTMuOWMxLjctMS42IDEuNy00LjIgMC4xLTUuOHoiIGZpbGw9IiMwMDAwMDAiLz4KICA8L2c+Cjwvc3ZnPgo=);
-    background-size: 16px;
-    display: inline-block;
-    width: 16px;
-    height: 12px;
-    background-repeat: no-repeat;
-    margin-left: 10px;
-}
-#pagination .prev a:before{
-    content:"";
-    background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAxMjkgMTI5IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxMjkgMTI5IiB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4Ij4KICA8Zz4KICAgIDxwYXRoIGQ9Im0xMjEuMywzNC42Yy0xLjYtMS42LTQuMi0xLjYtNS44LDBsLTUxLDUxLjEtNTEuMS01MS4xYy0xLjYtMS42LTQuMi0xLjYtNS44LDAtMS42LDEuNi0xLjYsNC4yIDAsNS44bDUzLjksNTMuOWMwLjgsMC44IDEuOCwxLjIgMi45LDEuMiAxLDAgMi4xLTAuNCAyLjktMS4ybDUzLjktNTMuOWMxLjctMS42IDEuNy00LjIgMC4xLTUuOHoiIGZpbGw9IiMwMDAwMDAiLz4KICA8L2c+Cjwvc3ZnPgo=);
-    background-size: 16px;
-    display: inline-block;
-    width: 16px;
-    height: 12px;
-    background-repeat: no-repeat;
-    margin-right:10px;
-}
 #pagination .next a, #pagination .prev a{
     color:#000;
     font-size:16px;
@@ -754,18 +734,20 @@
     margin-top:30px;
 }
 .comments-part  .amp-comment-button{
-    display: block;
-    width: 60%;
+    background-color: #B80000;
+    font-size: 13px;
+    font-family: 'Open Sans',sans-serif;
+    float: none;
+    width: 100%;
     margin: 0 auto;
-    background-color:#da0000;
-    font-size: 16px;
+    text-align: center;
+    border-radius: 3px;
     font-weight: 600;
 }
 .comments-part .amp-comment-button a{
-    color: #fff;
-    padding: 10px;
+    color: #ffffff;
     display: block;
-    text-align: center;
+    padding: 7px 0px 8px 0px;
 }
 .comments-part h3{
     margin: 0;
