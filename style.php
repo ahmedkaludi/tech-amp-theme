@@ -130,6 +130,7 @@
         font-family: 'Open Sans', sans-serif;
         font-weight:300;
         letter-spacing:0.5px;
+        width:85%;
     }
     .amp-main-menu ul li:hover a, .amp-main-menu ul li:active a, .amp-main-menu ul li:focus a{
         color:#ffffff;
@@ -586,6 +587,9 @@
     display: block;
     font-weight:600;
 }
+.posted-author-image .amp-author{
+    width:100%;
+}
 .single-post-title p{
     font-size: 16px;
     font-family: 'Open Sans', sans-serif;
@@ -599,19 +603,21 @@
     display:inline-block;
     margin-bottom:20px;
 }
-.posted-author-image{
-    float: left;
-    margin-right: 10px;
-}
-.posted-author-details span{
+.posted-author-image .amp-author .posted-time{
     display:block;
     font-size:12px;
     color:#333;
+    text-transform: none;
 }
-.posted-author-details .author-name{
-    margin-bottom:2px;
+.amp-author amp-img{
+    float:left;
+    margin-right:10px;
 }
-.posted-author-details .author-name a{
+.amp-author span{
+    font-size: 13px;
+    text-transform: lowercase;
+}
+.amp-author span a{
     font-size:14px;
     color:#000;
     font-weight:600;
