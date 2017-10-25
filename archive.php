@@ -1,4 +1,3 @@
-
 <?php amp_header() ?>
 <div class="amp-archive">
 	<div class="container">
@@ -7,10 +6,7 @@
 			
 			<?php 
 			$args = array();
-			  if($paged<=1){
-			  $args = array('offset'=>1);
-			  }
-			while(amp_loop('start',$args)): ?>
+			while(amp_loop('start')): ?>
 			<div class="loop-post small-post-list">
 			    <?php 
 				//array('thumbnail', 'medium', 'medium_large', 'large');
