@@ -351,7 +351,7 @@
         width: 100%;
         position:relative;
     }
-    .home_newpage .header{
+    .home_newpage .header, .search_page .header{
         background:#000;
     }
     .loop-post .featured-image-post-content h2{
@@ -437,9 +437,6 @@
 }
 .featured-image-post-content .amp-author-info .posted-author-details span, .featured-image-post-content .amp-author-info .posted-author-details a {
     color:#fff;
-}
-.featured-image-small-post-content .amp-author-info a{
-    font-weight:bold;
 }
 .featured-image-small-post-content .amp-author-info{
     font-size: 11px;
@@ -547,9 +544,7 @@
         margin: 0px 10px 0px 0px;
     }
 /*** --- single - post ***/
-.single-postamp-single .featured-image-big-post{
-    display:none;
-}
+
 .amp-single-page{
     position: relative;
     top: -42px;
@@ -693,22 +688,21 @@
 .single-related-posts .posted-author-details{
     margin-top:5px;
 }
-.single-related-posts .posted-author-details span{
+.single-related-posts .posted-author-details span, .amp-archive .posted-author-details span{
     display:inline-block;
 }
-.single-related-posts .posted-author-details .author-name{
+.single-related-posts .posted-author-details .author-name, .amp-archive .posted-author-details .author-name{
     margin-right:5px;
 }
+
 /**** 
 * Archive
 *****/
-.amp-archive .featured-image-big-post{
-    display:none;
-}
+
 .amp-archive .header{
     background:#000;
 }
-.amp-archive-title{
+.amp-archive-title, .amp-archive .amp-loop-label{
     margin:0;
     padding-bottom:15px;
 }

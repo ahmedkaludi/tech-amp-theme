@@ -10,10 +10,17 @@ if( $paged >1 && is_home()){
 
 add_filter("ampforwp_body_class",'my_custom_class_next_pages');
 }
+if(is_search()){
+add_filter("ampforwp_body_class",'my_custom_class_search');
+}
 function my_custom_class_next_pages($previousClaases){
 
     $previousClaases[] = 'home_newpage';
     //print_r($previousClaases);die;
+    return  $previousClaases;
+}
+function my_custom_class_search($previousClaases){
+    $previousClaases[] = 'search_page';
     return  $previousClaases;
 }
 amp_header_core() ?>
@@ -56,6 +63,9 @@ amp_header_core() ?>
     </div><!-- /.amp-menu -->
     <?php amp_sidebar(['action'=>'end']); ?>
 </div>
+<?php
+    if(is_home() || is_front_page()){
+?>
 <div class="featured-image-big-post">
     <?php
     if (get_query_var( 'paged' ) ) {
@@ -93,6 +103,7 @@ amp_header_core() ?>
     amp_reset_loop();
     }  ?>
 </div><!-- /.featured-image-big-post -->
+<?php } ?>
 </div><!-- /.featured-image-wrapper -->
 <div class="content-wrapper">
 
