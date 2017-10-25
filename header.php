@@ -1,11 +1,11 @@
 <?php 
 if (get_query_var( 'paged' ) ) {
-            $paged = get_query_var('paged');
-        } elseif ( get_query_var( 'page' ) ) {
-            $paged = get_query_var('page');
-        } else {
-            $paged = 1;
-        } 
+    $paged = get_query_var('paged');
+} elseif ( get_query_var( 'page' ) ) {
+    $paged = get_query_var('page');
+} else {
+    $paged = 1;
+} 
 if( $paged >1 && is_home()){
 
 add_filter("ampforwp_body_class",'my_custom_class_next_pages');
@@ -79,7 +79,7 @@ amp_header_core() ?>
             <?php amp_loop_category(); ?>
             <?php amp_loop_title(); ?>
             <div class="amp-author-info">
-                <?php amp_loop_author('by'); ?>
+                <?php //amp_loop_author('by'); ?>
             </div><!-- /. amp-author-info -->
         </div><!-- /.featured-image-post-content -->
     </div>
