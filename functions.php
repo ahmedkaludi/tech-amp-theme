@@ -37,7 +37,7 @@ if (get_query_var( 'paged' ) ) {
 } else {
     $paged = 1;
 } 
-if( $paged ==1 && (is_home() || is_front_page()) ) {
+if( $paged ==1 && (is_home() || is_front_page() || is_single()) ) {
     $args = array('post_to_show'=>1);
         while(amp_loop('start',$args)): 
             if(! has_post_thumbnail() ){

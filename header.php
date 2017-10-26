@@ -2,6 +2,7 @@
 headerbody_classes();
 amp_header_core(); ?>
 <div class="featured-image-wrapper">
+<div class="without-image-bg">
  <header class="header container">
     <div class="header-part">
         <div class="left-nav">
@@ -25,7 +26,7 @@ amp_header_core(); ?>
         <div class="clearfix"></div>
     </div>
 </header>
-
+</div><!-- /.without-image-bg -->
 
 <?php amp_sidebar(['action'=>'start',
     'id'=>'sidebar',
