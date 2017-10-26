@@ -24,15 +24,12 @@
 			<div class="featured-image-small-post-content">
 				<?php amp_loop_category(); ?>
 			    <?php amp_loop_title(); ?>
-			    <div class="amp-author-info">
 					<?php 
 						$args = array(
 						"author_description"=>false,
 						'show_author_image'=>false,
-						'author_wrapper_class'=>'posted-author-details',
 						);
 					amp_loop_author($args); ?>
-				</div><!-- /.amp-author-info -->
 		    </div><!-- /.featured-image-small-post-content -->
 		</div>
 		<?php endwhile; amp_loop('end');  amp_pagination(); ?>

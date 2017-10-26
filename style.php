@@ -428,17 +428,17 @@
 .loop-wrapper .loop-post .featured-image .loop-img{
     background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 30%, rgba(0, 0, 0, .7) 100%) repeat scroll 0 0;
 }
-.featured-image-post-content .amp-author-info{
+.featured-image-post-content .amp-author{
     font-size:13px;
     font-weight:400;
     margin-top:2px;
     color:#ffffff;
     padding-top:10px;
 }
-.featured-image-post-content .amp-author-info .posted-author-details span, .featured-image-post-content .amp-author-info .posted-author-details a {
+.featured-image-post-content .amp-author .author-name, .featured-image-post-content .amp-author .author-name a {
     color:#fff;
 }
-.featured-image-small-post-content .amp-author-info{
+.featured-image-small-post-content .amp-author{
     font-size: 11px;
     font-weight: 300;
     margin-top: 3px;
@@ -630,29 +630,15 @@
     margin-top: 6px;
     line-height:1.5;
 }
-.posted-author{
-    width:100%;
-    clear:both;
-    display:inline-block;
-    margin-bottom:20px;
-}
-.posted-author-details span{
-    display:block;
-    font-size:13px;
-    color:#333;
-}
 .amp-author amp-img{
     float:left;
     margin-right:10px;
 }
-.posted-author-details span a{
+.amp-author span a{
     font-size:14px;
     color:#000;
     font-weight:600;
     padding-left:3px;
-}
-.posted-author-details .author-name{
-    text-transform: lowercase;
 }
 .single-post-content{
     display:inline-block;
