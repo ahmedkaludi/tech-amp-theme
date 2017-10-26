@@ -181,8 +181,10 @@
     .header-part{
         width:100%;
         clear:both;
+        display:inline;
+        
     }
-    .amp-home .header-part, .single-postamp-single .header-part{
+    .amp-home .header, .single-postamp-single .header{
         padding:10px 0px 5px;
     }
     .amp-home.home_newpage .header-part{
@@ -354,9 +356,20 @@
         width: 100%;
         position:relative;
     }
-    .home_newpage .header, .search_page .header{
+    .home_newpage .header, .search_page .header, .amp-archive .header, .without_image .header {
         background:#000;
         padding:10px 0px 5px;
+    }
+    .home_newpage .featured-image-wrapper, .search_page .featured-image-wrapper, .amp-archive .featured-image-wrapper, .without_image .featured-image-wrapper{
+        background:#000;
+    }
+    .home-background{
+        position: relative;
+        top: -50px;
+        background: #000;
+    }
+    .without_image .header{
+        margin-bottom:20px;
     }
     .loop-post .featured-image-post-content h2{
         font-size: 26px;
@@ -404,8 +417,7 @@
     margin-bottom:-50px;
 }
 .featured-image-big-post{
-    position:relative;
-    top:-50px;
+ 
     max-width: 600px;
     margin: 0 auto;
 }
@@ -424,10 +436,15 @@
     left: 20px;
     right: 20px;
 }
+.featured-without-image-post-content{
+    width:100%;
+    margin-top:50px;
+}
 .loop-wrapper .loop-post .featured-image{
     position:relative;
     width:100%;
     display:inline-block;
+    z-index:0;
 }
 .loop-wrapper .loop-post .featured-image .loop-img{
     background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 30%, rgba(0, 0, 0, .7) 100%) repeat scroll 0 0;
@@ -454,14 +471,14 @@
 .featured-image-small-posts{
     float:left;
 }
-.featured-image-small-post-content .loop-title {
+.featured-image-small-post-content .loop-title, .featured-without-image-post-content .loop-title{
     font-size: 15px;
     line-height: 20px;
     margin: 0;
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
 }
-.featured-image-small-post-content .loop-title a{
+.featured-image-small-post-content .loop-title a, .featured-without-image-post-content .loop-title a{
     color:#000;
 }
 .featured-image-small-post-content .loop-category {
@@ -482,7 +499,7 @@
     border-top:none;
     padding-top:0;
 }
-.loop-post .featured-image-small-post-content ul li {
+.loop-post .featured-image-small-post-content ul li, .loop-post .featured-without-image-post-content ul li{
     margin-right: 5px;
     background: #B80000;
     border-radius: 3px;
@@ -491,7 +508,7 @@
     font-weight: 600;
     text-transform: uppercase;
 }
-.loop-post .featured-image-small-post-content ul li a{
+.loop-post .featured-image-small-post-content ul li a, .loop-post .featured-without-image-post-content ul li a{
     color: #ffffff;
     padding: 1px 5px 2px 5px;
     display:inline-block;
@@ -580,13 +597,20 @@
 .amp-single-page{
     position: relative;
     top: -42px;
-    max-width: 600px;
     margin: 0 auto;
-   
+}
+.single-background{
+    text-align: center;
+    background: #000;
+    line-height:0;
 }
 .single-featured-image{
-    display:inline-block;
-    width:100%;
+    display: inline-block;
+    width: 600px;
+    margin: 0 auto;
+}
+.single-featured-image figure{
+    margin:0;
 }
 .featured-small-posts{
     width:100%;
@@ -694,6 +718,7 @@
 }
 .single-related-posts .amp-related-posts li{
     margin-bottom:20px;
+    width:100%;
 }
 .single-related-posts .amp-related-posts li .related_link{
     font-size: 16px;
@@ -712,20 +737,25 @@
 .single-related-posts .posted-author-details .author-name, .amp-archive .posted-author-details .author-name{
     margin-right:5px;
 }
-
+.comment-meta amp-img{
+    border-radius:50%;
+    margin-right:10px;
+    float:left;
+}
 /**** 
 * Archive
 *****/
 
-.amp-archive .header{
-    background:#000;
-}
 .amp-archive-title, .amp-archive .amp-loop-label{
     margin:0;
     padding-bottom:15px;
 }
+.amp-archive-desc{
+    padding-bottom: 15px;
+    margin-top: -10px;
+}
 .amp-archive .featured-small-posts{
-    margin-top:10px;
+    margin-top:15px;
 }
 /**** 
 * Comments
@@ -842,6 +872,7 @@
         font-size: 12px;
         text-align: center;
         background-color:#222;
+        margin-top:30px;
     }
 .footer .amp-menu{
     margin-top:15px;
@@ -854,6 +885,9 @@
 }
 .footer .amp-menu li a{
     color:#fff;
+}
+.footer .amp-menu li:hover a {
+    background: transparent;
 }
 .footer .amp-social{
     margin-top:15px;

@@ -29,4 +29,43 @@ add_amp_theme_support('AMP-related-posts');
 // Post Pagination
 add_amp_theme_support('AMP-post-pagination');
 
+function headerbody_classes(){
+if (get_query_var( 'paged' ) ) {
+    $paged = get_query_var('paged');
+} elseif ( get_query_var( 'page' ) ) {
+    $paged = get_query_var('page');
+} else {
+    $paged = 1;
+} 
+if( $paged ==1 && (is_home() || is_front_page()) ) {
+    $args = array('post_to_show'=>1);
+        while(amp_loop('start',$args)): 
+            if(! has_post_thumbnail() ){
+            add_filter("ampforwp_body_class",'my_custom_class_withoutimage');
+            }
+         endwhile;  amp_loop('end');  
+        amp_reset_loop();
+}
+if( $paged >1 && is_home() || is_front_page()){
+    add_filter("ampforwp_body_class",'my_custom_class_next_pages');
+}
+if(is_search()){
+add_filter("ampforwp_body_class",'my_custom_class_search');
+}
+
+}
+function my_custom_class_next_pages($previousClaases){
+
+    $previousClaases[] = 'home_newpage';
+    return  $previousClaases;
+}
+function my_custom_class_search($previousClaases){
+    $previousClaases[] = 'search_page';
+    return  $previousClaases;
+}
+function my_custom_class_withoutimage($previousClaases){
+    $previousClaases[] = 'without_image';
+    return  $previousClaases;
+}
+
 amp_font('https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600|Source+Sans+Pro:400,700|Open+Sans:300,400,600,700');

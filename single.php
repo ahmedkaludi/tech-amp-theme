@@ -1,8 +1,10 @@
 <?php amp_header(); ?>
 <div class="amp-single-page">
-	<div class="single-featured-image">
-		<?php amp_featured_image();?>
-	</div><!-- /.single-featured-image -->
+	<div class="single-background">
+		<div class="single-featured-image">
+			<?php amp_featured_image();?>
+		</div><!-- /.single-featured-image -->
+	</div><!-- /.single-background -->
 	<div class="container">
 		<div class="single-post-title">
 			<?php amp_title(); ?>
