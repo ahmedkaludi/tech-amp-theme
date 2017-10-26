@@ -9,12 +9,14 @@
 			<?php amp_excerpt(); ?>
 		</div><!-- /.single-post-title -->
 		<?php 
-		$args = array('avatar_width'=>40,
-					  'avatar_height'=>40,
+		$args = array('avatar'=>true,
+					  'avatar_size'=>40,
 					  "author_description"=>false,
-					  'show_author_image'=>true,
+					  'author_prefix'=>'By',
 					  'author_image_wrapper'=>'posted-author-image',
 					  'author_wrapper_class'=>'posted-author-details',
+					  'show_date'=>true,
+					  'show_time'=>true
 					);
 		amp_author_box($args); 
 		?>
