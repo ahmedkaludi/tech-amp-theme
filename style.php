@@ -775,6 +775,7 @@
     text-align: center;
     border-radius: 3px;
     font-weight: 600;
+    width:250px;
 }
 .comments-part .amp-comment-button a{
     color: #ffffff;
