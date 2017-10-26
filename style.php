@@ -59,7 +59,7 @@
 .container {
     max-width: 600px;
     margin: 0 auto;
-    padding: 0px 10px;
+    padding: 0px;
 }
 
 /****
@@ -470,10 +470,14 @@
     float:left;
 }
 .small-post-list{
-    margin-bottom:15px;
+    margin-bottom:12px;
     border-top:1px solid #eee;
+    padding-top:17px;
 }
-
+.small-post-list:first-child{
+    border-top:none;
+    padding-top:0;
+}
 .loop-post .featured-image-small-post-content ul li {
     margin-right: 5px;
     background: #B80000;
