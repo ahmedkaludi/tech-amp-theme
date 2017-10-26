@@ -49,20 +49,20 @@ amp_header_core() ?>
     </div>
 </header>
 
-<div class="amp-menu-sidebar">
-    <?php amp_sidebar(['action'=>'start',
-        'id'=>'sidebar',
-        'layout'=>'nodisplay',
-        'side'=>'right'
-    ] ); ?>
-    <div class="amp-close-btn">
-        <?php amp_sidebar(['action'=>'close-button']); ?>
-    </div>
-    <div class="amp-main-menu">
-        <?php amp_menu(); ?>
-    </div><!-- /.amp-menu -->
-    <?php amp_sidebar(['action'=>'end']); ?>
+
+<?php amp_sidebar(['action'=>'start',
+    'id'=>'sidebar',
+    'layout'=>'nodisplay',
+    'side'=>'right'
+] ); ?>
+<div class="amp-close-btn">
+    <?php amp_sidebar(['action'=>'close-button']); ?>
 </div>
+<div class="amp-main-menu">
+    <?php amp_menu(); ?>
+</div><!-- /.amp-menu -->
+<?php amp_sidebar(['action'=>'end']); ?>
+
 <?php
     if(is_home() || is_front_page()){
 ?>
