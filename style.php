@@ -181,14 +181,17 @@
     .header-part{
         width:100%;
         clear:both;
-        display:inline;
-        margin-bottom:20px;
+    }
+    .amp-home .header-part, .single-postamp-single .header-part{
+        padding:10px 0px 5px;
+    }
+    .amp-home.home_newpage .header-part{
+        padding:0
     }
     .left-nav{
         float:left;
         width:15%;
         position:relative;
-        top:13px;
         left:18px;
     }
     .logo-amp {
@@ -206,7 +209,7 @@
         float: right;
         position: relative;
         z-index: 1;
-        padding: 12px 15px 0px 10px;
+        padding: 0px 15px 0px 10px;
 
     }
 
@@ -353,6 +356,7 @@
     }
     .home_newpage .header, .search_page .header{
         background:#000;
+        padding:10px 0px 5px;
     }
     .loop-post .featured-image-post-content h2{
         font-size: 26px;
@@ -834,12 +838,56 @@
 * Footer
 *****/
     .footer{
-        padding: 30px 0px 20px 0px;
+        padding: 40px 0px;
         font-size: 12px;
         text-align: center;
+        background-color:#222;
     }
-
-
+.footer .amp-menu{
+    margin-top:15px;
+}
+.footer .amp-menu li{
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.footer .amp-menu li a{
+    color:#fff;
+}
+.footer .amp-social{
+    margin-top:15px;
+}
+.footer .amp-social ul a{
+    background-color: #333;
+    color: #fff;
+    margin-right: 5px;
+    padding: 5px 3px;
+    border-radius: 2px;
+    margin-top: 10px;
+    display: inline-block;
+}
+.icon-twitter:before, .icon-facebook:before, .icon-pinterest:before, .icon-google-plus:before, .icon-linkedin:before,
+.icon-youtube-play:before, .icon-instagram:before, .icon-reddit-alien:before, .icon-vk:before, .icon-snapchat-ghost:before,
+.icon-tumblr:before {
+    background:#333;
+}
+.footer .amp-social li:before {
+    border-radius: inherit;
+}
+.rights-reserved, .rights-reserved a{
+   width: 100%;
+    background-color: #2B2D2F;
+    padding: 18px 0px;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 700;
+}
+.rights-reserved a{
+    padding-left:3px;
+}
 /****
 * RTL Styles
 *****/
