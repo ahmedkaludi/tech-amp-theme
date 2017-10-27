@@ -3,11 +3,11 @@
 	<div class="single-background">
 		<?php
 
-		 //if ( has_post_thumbnail()): ?>
+		 if ( has_post_thumbnail()): ?>
 		<div class="single-featured-image">
 			<?php amp_featured_image(); ?>
 		</div><!-- /.single-featured-image -->
-		<?php //endif; ?>
+		<?php endif; ?>
 	</div><!-- /.single-background -->
 	<div class="container">
 		<div class="single-post-title">

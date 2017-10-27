@@ -37,7 +37,7 @@ if (get_query_var( 'paged' ) ) {
 } else {
     $paged = 1;
 } 
-if( $paged ==1 && (is_home() || is_front_page() || is_single()) ) {
+if( $paged ==1 && (is_home() || is_front_page()) ) {
     $args = array('post_to_show'=>1);
         while(amp_loop('start',$args)): 
             if(! has_post_thumbnail() ){
@@ -52,6 +52,11 @@ if( $paged >1 && is_home() || is_front_page()){
 if(is_search()){
 add_filter("ampforwp_body_class",'my_custom_class_search');
 }
+if(is_single()){
+     if(! has_post_thumbnail() ){
+        add_filter("ampforwp_body_class",'my_custom_class_single_img');
+    }
+}
 
 }
 function my_custom_class_next_pages($previousClaases){
@@ -61,6 +66,10 @@ function my_custom_class_next_pages($previousClaases){
 }
 function my_custom_class_search($previousClaases){
     $previousClaases[] = 'search_page';
+    return  $previousClaases;
+}
+function my_custom_class_single_img($previousClaases){
+    $previousClaases[] = 'without_image';
     return  $previousClaases;
 }
 function my_custom_class_withoutimage($previousClaases){

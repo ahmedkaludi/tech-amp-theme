@@ -184,9 +184,6 @@
         display:inline;
         
     }
-    .amp-home .header, .single-postamp-single .header{
-        padding:10px 0px 5px;
-    }
     .amp-home.home_newpage .header-part{
         padding:0
     }
@@ -195,6 +192,9 @@
         width:15%;
         position:relative;
         left:18px;
+    }
+    .amp-archive .left-nav, .without_image .left-nav{
+        left:0
     }
     .logo-amp {
         float: left;
@@ -212,6 +212,7 @@
         position: relative;
         z-index: 1;
         padding: 0px 15px 0px 10px;
+        line-height:0;
 
     }
 
@@ -356,9 +357,12 @@
         width: 100%;
         position:relative;
     }
+    .amp-home .header, .single-postamp-single .header{
+        padding:10px 0px;
+    }
     .home_newpage .header, .search_page .header, .amp-archive .header, .without_image .header {
         background:#222;
-        padding:10px 0px 5px;
+        padding:10px 0px;
     }
     .home_newpage .featured-image-wrapper, .search_page .featured-image-wrapper, .amp-archive .featured-image-wrapper{
         background:#222;
@@ -377,7 +381,7 @@
     }
     .without_image .amp-single-page{
         position:relative;
-        top:30px;
+        top:0px;
     }
     .without_image .without-image-bg{
         background:#222;
@@ -411,6 +415,10 @@
         color: #ffffff;
         padding: 5px 10px;
         display: inline-block;
+    }
+    .amp-logo a{
+        line-height:0;
+        display:block;
     }
 
 /*** loop - styles ***/
@@ -607,26 +615,37 @@
 
 .amp-single-page{
     position: relative;
-    top: -42px;
+    top: -45px;
     margin: 0 auto;
 }
-.without_image .single-background{
-    text-align: center;
+.single-background{
     background: #222;
     line-height:0;
 }
 .single-featured-image{
-    display: inline-block;
+    width:100%;
     max-width: 600px;
     margin: 0 auto;
+    text-align:center;
 }
 .single-featured-image figure{
+    margin:0 auto;
+}
+.single-featured-image amp-img{
     margin:0;
+    width:100%;
+}
+.single-postamp-single .featured-image-wrapper{
+    margin-bottom:4px;
 }
 .featured-small-posts{
     width:100%;
     display:inline-block;
     margin-top:20px;
+}
+.amp-featured-image amp-img img{
+    margin:0 auto;
+    text-align:center;
 }
 .single-featured-image-post{
     width:100%;
