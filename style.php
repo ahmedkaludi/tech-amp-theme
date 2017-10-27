@@ -362,6 +362,7 @@
     }
     .home_newpage .featured-image-wrapper, .search_page .featured-image-wrapper, .amp-archive .featured-image-wrapper{
         background:#222;
+        display: block;
     }
     .without_image .home-background{
          background: transparent;
@@ -609,14 +610,14 @@
     top: -42px;
     margin: 0 auto;
 }
-.single-background{
+.without_image .single-background{
     text-align: center;
     background: #222;
     line-height:0;
 }
 .single-featured-image{
     display: inline-block;
-    width: 600px;
+    max-width: 600px;
     margin: 0 auto;
 }
 .single-featured-image figure{
@@ -758,7 +759,9 @@
 /**** 
 * Archive
 *****/
-
+.amp-archive{
+    margin-top:50px;
+}
 .amp-archive-title, .amp-archive .amp-loop-label{
     margin:0;
     padding-bottom:15px;
@@ -769,6 +772,7 @@
 }
 .amp-archive .featured-small-posts{
     margin-top:15px;
+    display:inline-block;
 }
 /**** 
 * Comments
