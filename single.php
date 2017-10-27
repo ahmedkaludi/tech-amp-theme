@@ -14,18 +14,20 @@
 			<?php amp_title(); ?>
 			<?php amp_excerpt(); ?>
 		</div><!-- /.single-post-title -->
-		<?php 
-		$args = array('avatar'=>true,
-					  'avatar_size'=>40,
-					  "author_description"=>false,
-					  'author_prefix'=>'By',
-					  'author_image_wrapper'=>'posted-author-image',
-					  'author_wrapper_class'=>'posted-author-details',
-					  'show_date'=>true,
-					  'show_time'=>true
-					);
-		amp_author_box($args); 
-		?>
+		<div class="post-author-info">
+			<?php 
+			$args = array('avatar'=>true,
+						  'avatar_size'=>40,
+						  "author_description"=>false,
+						  'author_prefix'=>'by',
+						  'author_image_wrapper'=>'posted-author-image',
+						  'author_wrapper_class'=>'posted-author-details',
+						  'show_date'=>true,
+						  'show_time'=>true
+						);
+			amp_author_box($args); 
+			?>
+		</div>
 		<div class="single-post-content">
 			<?php amp_content(); ?>
 		</div><!-- /.single-post-content -->
@@ -36,10 +38,6 @@
 		<div class="single-post-tags-list">
 		<?php amp_tags_list();?>
 		</div><!-- /.single-post-tags-list -->
-		<div class="comments-part">
-			<?php amp_comments();?>
-		</div><!-- /.comments-part -->
-			<?php amp_post_navigation();?>
 		<div class="single-related-posts">
 			<?php 
 			$argsRelatedPosts = array(
@@ -53,6 +51,11 @@
 									);
 			amp_related_posts($argsRelatedPosts); ?>
 		</div><!-- /.related-posts -->
+		<div class="comments-part">
+			<?php amp_comments();?>
+		</div><!-- /.comments-part -->
+			<?php amp_post_navigation();?>
+		
 	</div><!-- /.container -->
 </div><!-- /.amp-single-page -->
 <?php amp_footer()?>

@@ -59,7 +59,7 @@
 .container {
     max-width: 600px;
     margin: 0 auto;
-    padding: 0px;
+    padding: 0px 10px;
 }
 
 /****
@@ -211,7 +211,7 @@
         float: right;
         position: relative;
         z-index: 1;
-        padding: 0px 15px 0px 10px;
+        padding: 0px 10px 0px 10px;
         line-height:0;
 
     }
@@ -362,7 +362,7 @@
     }
     .home_newpage .header, .search_page .header, .amp-archive .header, .without_image .header {
         background:#222;
-        padding:10px 0px;
+        padding:10px;
     }
     .home_newpage .featured-image-wrapper, .search_page .featured-image-wrapper, .amp-archive .featured-image-wrapper{
         background:#222;
@@ -386,35 +386,21 @@
     .without_image .without-image-bg{
         background:#222;
     }
-    .loop-post .featured-image-post-content h2{
-        font-size: 26px;
+    .featured-image-post-content h2{
+        font-size: 25px;
         margin: 0px;
         line-height: 30px;
         font-family: 'Open Sans', sans-serif;
         font-weight: 400;
     }
-    .loop-post .featured-image-post-content h2 a{
+    .featured-image-post-content h2 a{
         color:#ffffff;
     }
     .loop-post ul{
         list-style-type: none;
         display: inline-flex;
         margin: 0px;
-        margin-bottom:10px;
-    }
-    .loop-post .featured-image-post-content ul li{
-        margin-right: 8px;
-        background: #B80000;
-        font-size: 10px;
-        font-family: 'Open Sans', sans-serif;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-    }
-    .loop-post .featured-image-post-content ul li a{
-        color: #ffffff;
-        padding: 5px 10px;
-        display: inline-block;
+        margin-bottom:5px;
     }
     .amp-logo a{
         line-height:0;
@@ -436,9 +422,11 @@
     margin-bottom:-50px;
 }
 .featured-image-big-post{
- 
     max-width: 600px;
     margin: 0 auto;
+}
+.without_image .featured-image-big-post{
+    padding:0px 10px;
 }
 .featured-image-big-post .header-part{
     position: absolute;
@@ -451,9 +439,9 @@
 .featured-image-post-content{
     position: absolute;
     top: auto;
-    bottom: 30px;
-    left: 20px;
-    right: 20px;
+    bottom: 15px;
+    left: 15px;
+    right: 15px;
 }
 .featured-without-image-post-content{
     width:100%;
@@ -473,15 +461,15 @@
     font-weight:400;
     margin-top:2px;
     color:#ffffff;
-    padding-top:10px;
+    padding-top:5px;
 }
-.featured-image-post-content .amp-author .author-name, .featured-image-post-content .amp-author .author-name a {
-    color:#fff;
+.featured-image-post-content .amp-author .author-name a {
+    color: #fff;
+    font-size: 12px;
+    font-weight: 500;
 }
 .featured-image-small-post-content .amp-author{
-    font-size: 11px;
-    font-weight: 300;
-    margin-top: 3px;
+    margin-top: 2px;
 }
 .featured-image-small-posts .loop-img{
     width:90px;
@@ -491,19 +479,17 @@
     float:left;
 }
 .featured-image-small-post-content .loop-title, .featured-without-image-post-content .loop-title{
-    font-size: 15px;
-    line-height: 20px;
+    font-size: 17px;
+    line-height: 22px;
     margin: 0;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans',sans-serif;
     font-weight: 400;
 }
 .featured-image-small-post-content .loop-title a, .featured-without-image-post-content .loop-title a{
     color:#000;
 }
 .featured-image-small-post-content .loop-category {
-    position: relative;
-    top: -4px;
-    margin-bottom: 2px;
+    margin-bottom: 3px;
 }
 .featured-image-small-post-content{
     width:66%;
@@ -518,16 +504,16 @@
     border-top:none;
     padding-top:0;
 }
-.loop-post .featured-image-small-post-content ul li, .loop-post .featured-without-image-post-content ul li{
+.featured-image-small-post-content ul li, .featured-without-image-post-content ul li, .featured-image-post-content ul li{
     margin-right: 5px;
-    background: #B80000;
+    background: #90A4AE;
     border-radius: 3px;
     font-size: 10px;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 600;
+    font-family: 'Open Sans',sans-serif;
+    font-weight: 400;
     text-transform: uppercase;
 }
-.loop-post .featured-image-small-post-content ul li a, .loop-post .featured-without-image-post-content ul li a{
+.featured-image-small-post-content ul li a, .featured-without-image-post-content ul li a, .featured-image-post-content ul li a{
     color: #ffffff;
     padding: 1px 5px 2px 5px;
     display:inline-block;
@@ -636,7 +622,7 @@
     width:100%;
 }
 .single-postamp-single .featured-image-wrapper{
-    margin-bottom:4px;
+    margin-bottom:0px;
 }
 .featured-small-posts{
     width:100%;
@@ -652,10 +638,13 @@
 }
 .single-post-title h1{
     margin: 0;
-    font-size: 26px;
-    line-height: 34px;
+    font-size: 40px;
+    line-height: 45px;
     color: #000000;
     font-weight: 300;
+}
+.single-post-title{
+    margin-top:15px;
 }
 .single-post-content p{
     font-size: 15px;
@@ -665,41 +654,46 @@
 .amp-author amp-img{
     border-radius:50%;
 }
-.post-author {
-    font-size:14px;
-}
 .posted-time{
     display:block;
+    font-size:14px;
 }
+.amp-single-page .post-author-info .amp-author{
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 12px;
+} 
 .post-author .amp-author amp-img{
     float:left;
     border-radius: 50%;
     margin-right: 15px;
 }
-.post-author .amp-author strong {
-    font-size: 16px;
+.amp-single-page .author-name {
+    font-size: 14px;
     display: block;
+}
+.amp-single-page .author-name a{
+    font-size:14px;
     font-weight:600;
 }
 .posted-author-image .amp-author{
     width:100%;
 }
 .single-post-title p{
-    font-size: 16px;
-    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    font-family: 'Open Sans',sans-serif;
     color: #000;
     margin-top: 6px;
-    line-height:1.5;
+    font-weight: 400;
+    line-height: 1.5;
 }
 .amp-author amp-img{
     float:left;
     margin-right:10px;
 }
 .amp-author span a{
-    font-size:14px;
-    color:#000;
-    font-weight:600;
-    padding-left:3px;
+    font-size: 10px;
+    color: #333;
+    font-weight: 500;
 }
 .single-post-content{
     display:inline-block;
@@ -793,6 +787,10 @@
     margin-top:15px;
     display:inline-block;
 }
+.amp-related-posts ul {
+    margin:0;
+}
+.amp-related-posts
 /**** 
 * Comments
 *****/
@@ -833,7 +831,7 @@
     width:100%;
     display:inline-block;
     clear:both;
-    margin-top:30px;
+    margin-top:10px;
 }
 .comments-part  .amp-comment-button{
     background-color: #B80000;
