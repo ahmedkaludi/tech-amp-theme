@@ -4,7 +4,11 @@
     body{ font-family: 'Open Sans', sans-serif; font-size: 16px; line-height:1.4; }
     ol, ul{ list-style-position: inside }
     p, ol, ul, figure{ margin: 0 0 1em; padding: 0; }
-    a, a:active, a:visited{ color:#ed1c24; text-decoration: none }
+    a, a:active, a:visited{ 
+    <?php if($redux_builder_amp['tech-color-scheme']['rgba']){?>
+        color: <?php echo $redux_builder_amp['tech-color-scheme'] ['rgba'] ?>;
+        <?php } else { ?> color:#ed1c24; <?php } ?>
+        text-decoration: none }
     a:hover, a:active, a:focus{}
     pre{ white-space: pre-wrap;}
     .left{float:left}
@@ -375,6 +379,9 @@
         position: relative;
         top: -50px;
         background: #222;
+        <?php if(isset($redux_builder_amp['header-type']) && $redux_builder_amp['header-type']=='2'){?>
+                display:none;
+        <?php } ?>
     }
     .without_image .header{
         margin-bottom:20px;
@@ -506,7 +513,9 @@
 }
 .featured-image-small-post-content ul li, .featured-without-image-post-content ul li, .featured-image-post-content ul li{
     margin-right: 5px;
-    background: #90A4AE;
+    <?php if($redux_builder_amp['tech-taxonomy-color-scheme']['rgba']){?>
+        background: <?php echo $redux_builder_amp['tech-taxonomy-color-scheme'] ['rgba'] ?>;
+        <?php } else { ?> background: #90A4AE; <?php } ?>
     border-radius: 3px;
     font-size: 10px;
     font-family: 'Open Sans',sans-serif;
@@ -739,7 +748,9 @@
     content: "";
     display: block;
     width: 92px;
-    border-bottom: 2px solid #da0000;
+    border-bottom: 2px solid 
+    <?php if($redux_builder_amp['tech-color-scheme']['rgba']){ echo $redux_builder_amp['tech-color-scheme'] ['rgba'] ?>;
+        <?php } else { ?> #da0000; <?php } ?>
     position: relative;
     top: 12px;
 }

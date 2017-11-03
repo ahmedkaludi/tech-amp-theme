@@ -11,9 +11,13 @@
 	</div><!-- /.single-background -->
 	<div class="container">
 		<div class="single-post-title">
-			<?php amp_title(); ?>
-			<?php amp_excerpt(); ?>
+			<?php amp_title();
+			global $redux_builder_amp;
+			if(isset($redux_builder_amp['tech-excerpt']) && $redux_builder_amp['tech-excerpt']==1){ amp_excerpt();} ?>
 		</div><!-- /.single-post-title -->
+		<?php 
+		global $redux_builder_amp;
+		if(isset($redux_builder_amp['tech-author-box']) && $redux_builder_amp['tech-author-box']==1){?> 
 		<div class="post-author-info">
 			<?php 
 			$args = array('avatar'=>true,
@@ -28,16 +32,25 @@
 			amp_author_box($args); 
 			?>
 		</div>
+		<?php }?>
 		<div class="single-post-content">
 			<?php amp_content(); ?>
 		</div><!-- /.single-post-content -->
-		
+		<?php 
+				global $redux_builder_amp;
+				if(isset($redux_builder_amp['tech-post-pagination']) && $redux_builder_amp['tech-post-pagination']==1){
+					amp_post_navigation();
+				}?>
+		<?php 
+				global $redux_builder_amp;
+				if(isset($redux_builder_amp['tech-taxonomy']) && $redux_builder_amp['tech-taxonomy']==1){?>
 		<div class="single-post-category-list">
 			<?php amp_categories_list();?>
 		</div><!-- /.single-post-category-list -->
 		<div class="single-post-tags-list">
 		<?php amp_tags_list();?>
 		</div><!-- /.single-post-tags-list -->
+		<?php }?>
 		<div class="single-related-posts">
 			<?php 
 			$argsRelatedPosts = array(
@@ -53,9 +66,8 @@
 		</div><!-- /.related-posts -->
 		<div class="comments-part">
 			<?php amp_comments();?>
-		</div><!-- /.comments-part -->
-			<?php amp_post_navigation();?>
-		
+		</div><!-- /.comments-part -->	
+		<?php //amp_post_navigation();?>
 	</div><!-- /.container -->
 </div><!-- /.amp-single-page -->
 <?php amp_footer()?>

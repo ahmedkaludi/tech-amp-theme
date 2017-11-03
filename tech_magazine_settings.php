@@ -29,6 +29,7 @@ if ( ! function_exists( 'ampforwp_tech_theme_settings' ) ) {
                             '1' =>  'Header with Image',
                             '2' =>  'Header Bar'
                         ),
+                       'default'=> '1',
                 ),
                  //Color Scheme section
                 array(
@@ -53,7 +54,7 @@ if ( ! function_exists( 'ampforwp_tech_theme_settings' ) ) {
                         'subtitle'  => __('Choose the color for Category & Tags','amptechtheme'),
                         'type'      => 'color_rgba',
                         'default'   => array(
-                             'color'     => '#ed1c24',
+                             'color'     => '#ed1634',
                          ),
                 ),
 
