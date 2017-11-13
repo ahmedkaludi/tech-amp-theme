@@ -221,7 +221,7 @@
         float: right;
         position: relative;
         z-index: 1;
-        padding: 0px 10px 0px 10px;
+        padding: 0px 17px 0px 10px;
         line-height:0;
     }
     
@@ -426,7 +426,7 @@
     }
     .amp-logo a{
         line-height: 0;
-        font-size: 16px;
+        font-size: 14px;
         display: block;
         font-weight: 700;
         top: 8px;
@@ -563,29 +563,26 @@
 /****
 * Pagination
 *****/
-.loop-pagination{
-    background-color: #B80000;
-}
 .loop-pagination .right, .loop-pagination .left{
     font-size: 13px;
     font-family: 'Open Sans', sans-serif;
-    float: left;
-    width: 50%;
     margin: 0 auto;
     text-align: center;
     border-radius: 3px;
     font-weight: 600;
 }
 .loop-pagination .right{
-    float:right
+    float:right;
+    background-color: #B80000;
 }
 .loop-pagination .left{
     float:left;
+    background-color: #B80000;
 }
 .loop-pagination .right a, .loop-pagination .left a{
     color:#ffffff;
     display: block;
-    padding: 7px 0px 8px 0px;
+    padding: 7px 10px 8px 13px;
 }
 #pagination{
     display:inline-block;
@@ -950,29 +947,30 @@
 * Footer
 *****/
     .footer{
-        padding: 40px 0px;
+        padding: 40px 0px 30px 0px;
         font-size: 12px;
         text-align: center;
         background-color:#222;
         margin-top:30px;
     }
 .footer .amp-menu{
-    margin-top:15px;
+    margin-top:20px;
 }
 .footer .amp-menu li{
     display: inline-block;
     font-size: 12px;
-    font-weight: 700;
+    font-weight: 600;
     text-transform: uppercase;
 }
 .footer .amp-menu li a{
-    color:#fff;
+    color:rgba(255, 255, 255, 0.9);
+    padding: 5px 8px;
 }
 .footer .amp-menu li:hover a {
     background: transparent;
 }
 .footer .amp-social{
-    margin-top:15px;
+    margin-top:20px;
 }
 .footer .amp-social ul a{
     background-color: #333;
@@ -996,10 +994,9 @@
     background-color: #2B2D2F;
     padding: 18px 0px;
     text-align: center;
-    color: #fff;
-    text-transform: uppercase;
+    color: #ccc;
     font-size: 11px;
-    font-weight: 700;
+    font-weight: 400;
 }
 .rights-reserved a{
     padding-left:3px;
