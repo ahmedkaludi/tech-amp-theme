@@ -38,11 +38,16 @@
         padding: 0;
     }
     .wp-caption-text {
+        position: absolute;
         font-size: 12px;
         line-height: 1.5em;
+        bottom: 0;
         margin: 0;
-        padding: .66em 10px .75em;
+        font-weight: 300;
+        padding: .66em;
+        color: #fff;
         text-align: center;
+        background: rgba(0, 0, 0, 0.45);
     }
 
     /* AMP Media */
@@ -410,8 +415,14 @@
         margin-bottom:5px;
     }
     .amp-logo a{
-        line-height:0;
-        display:block;
+        line-height: 0;
+        font-size: 20px;
+        display: block;
+        font-weight: 700;
+        top: 8px;
+        color: #fff;
+        position: relative;
+        text-transform: uppercase;
     }
 
 /*** loop - styles ***/
@@ -624,6 +635,7 @@
     text-align:center;
 }
 .single-featured-image figure{
+    position:relative;
     margin:0 auto;
 }
 .single-featured-image amp-img{
