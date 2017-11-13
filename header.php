@@ -21,7 +21,11 @@ amp_header_core(); ?>
  <header class="header container">
     <div class="header-part">
         <div class="left-nav">
-           <?php amp_sidebar(['action'=>'open-button']); ?>
+            <a class="lightbox" href="#menu">
+                <amp-img src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMS4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDUzIDUzIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1MyA1MzsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHdpZHRoPSIxNnB4IiBoZWlnaHQ9IjE2cHgiPgo8Zz4KCTxnPgoJCTxwYXRoIGQ9Ik0yLDEzLjVoNDljMS4xMDQsMCwyLTAuODk2LDItMnMtMC44OTYtMi0yLTJIMmMtMS4xMDQsMC0yLDAuODk2LTIsMlMwLjg5NiwxMy41LDIsMTMuNXoiIGZpbGw9IiNGRkZGRkYiLz4KCQk8cGF0aCBkPSJNMiwyOC41aDQ5YzEuMTA0LDAsMi0wLjg5NiwyLTJzLTAuODk2LTItMi0ySDJjLTEuMTA0LDAtMiwwLjg5Ni0yLDJTMC44OTYsMjguNSwyLDI4LjV6IiBmaWxsPSIjRkZGRkZGIi8+CgkJPHBhdGggZD0iTTIsNDMuNWg0OWMxLjEwNCwwLDItMC44OTYsMi0ycy0wLjg5Ni0yLTItMkgyYy0xLjEwNCwwLTIsMC44OTYtMiwyUzAuODk2LDQzLjUsMiw0My41eiIgZmlsbD0iI0ZGRkZGRiIvPgoJPC9nPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=" width="30" height="20" />            
+            </a>
+            <div class="light-box-button"> 
+            </div>
         </div><!-- /.left-nav -->
         <div class="logo-amp">
             <?php amp_logo(); ?>
@@ -70,23 +74,11 @@ amp_header_core(); ?>
             <div class="featured-image-post-content">
                 <?php amp_loop_category(); ?>
                 <?php amp_loop_title(); ?>
-                    <?php 
-                        $args = array(
-                        "author_description"=>false,
-                        'show_author_image'=>false,
-                        );
-                    amp_loop_author($args); ?>
             </div><!-- /.featured-image-post-content -->
             <?php else: ?>
             <div class="featured-without-image-post-content">
                 <?php amp_loop_category(); ?>
                 <?php amp_loop_title(); ?>
-                    <?php 
-                        $args = array(
-                        "author_description"=>false,
-                        'show_author_image'=>false,
-                        );
-                    amp_loop_author($args); ?>
             </div><!-- /.featured-image-post-content -->
             <?php endif; ?>
         </div>
@@ -99,3 +91,9 @@ amp_header_core(); ?>
 </div><!-- /.featured-image-wrapper -->
 <div class="content-wrapper">
 
+                <div class="lightbox-target" id="menu">
+                   <div class="amp-main-menu">
+                       <?php amp_menu(); ?>
+                    </div><!-- /.amp-menu -->
+                   <a class="lightbox-close" href="#"></a>
+                </div> 

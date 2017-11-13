@@ -1,13 +1,14 @@
 <?php amp_header(); ?>
 <div class="amp-single-page">
 	<div class="single-background">
+		<div class="single-post-featured-image">
 		<?php
-
 		 if ( has_post_thumbnail()): ?>
 		<div class="single-featured-image">
 			<?php amp_featured_image(); ?>
 		</div><!-- /.single-featured-image -->
 		<?php endif; ?>
+		</div>
 	</div><!-- /.single-background -->
 	<div class="container">
 		<div class="single-post-title">

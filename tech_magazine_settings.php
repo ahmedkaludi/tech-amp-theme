@@ -54,7 +54,7 @@ if ( ! function_exists( 'ampforwp_tech_theme_settings' ) ) {
                         'subtitle'  => __('Choose the color for Category & Tags','amptechtheme'),
                         'type'      => 'color_rgba',
                         'default'   => array(
-                             'color'     => '#ed1634',
+                             'color'     => '#90A4AE',
                          ),
                 ),
 
