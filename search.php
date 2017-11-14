@@ -1,6 +1,6 @@
 <?php amp_header() ?>
 <div class="amp-archive">
-	<div class="container">
+	<div class="cntr">
 		<?php amp_loop_template(); ?>
 	</div><!-- /.container -->
 </div><!-- /.amp-archive -->

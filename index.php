@@ -6,7 +6,7 @@
 } else {
     $paged = 1;
 } ?>
-<div class="container">
+<div class="cntr">
 	<div class="featured-small-posts">
 		<?php 
 		$args = array();
@@ -33,8 +33,11 @@
 		    </div><!-- /.featured-image-small-post-content -->
 		</div>
 		<?php endwhile; amp_loop('end');  
-		
-		amp_pagination(); ?>
+				$args = array(
+		         'previous_text'=> 'PREVIOUS',
+		         'next_text' => 'NEXT'
+		           );
+		amp_pagination($args); ?>
 	</div><!-- /.featured-small-posts -->
 </div><!-- /.container -->
 <?php amp_footer(); ?>

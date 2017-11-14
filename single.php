@@ -10,7 +10,7 @@
 		<?php endif; ?>
 		</div>
 	</div><!-- /.single-background -->
-	<div class="container">
+	<div class="cntr">
 		<div class="single-post-title">
 			<?php amp_title();
 			global $redux_builder_amp;
