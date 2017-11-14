@@ -7,21 +7,21 @@
     $paged = 1;
 } ?>
 <div class="cntr">
-	<div class="featured-small-posts">
+	<div class="featured-sp">
 		<?php 
 		$args = array();
 		  if($paged<=1){
 		  $args = array('offset'=>1);
 		  }
 		while(amp_loop('start',$args)): ?>
-		<div class="loop-post small-post-list">
+		<div class="loop-post sp-list">
 		    <?php 
 			//array('thumbnail', 'medium', 'medium_large', 'large');
 			$args = array("tag"=>'div',"tag_class"=>'image-container','image_size'=>'thumbnail', 'responsive'=> true); ?>
-			<div class="featured-image-small-posts">
+			<div class="featured-img-sp">
 				<?php amp_loop_image($args); ?>
 			</div><!-- /.featured-image-small-posts -->
-			<div class="featured-image-small-post-content">
+			<div class="featured-img-sp-cnt">
 				<?php amp_loop_category(); ?>
 			    <?php amp_loop_title(); ?>
 					<?php 

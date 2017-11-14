@@ -1,17 +1,17 @@
 <?php amp_header(); ?>
-<div class="amp-single-page">
-	<div class="single-background">
-		<div class="single-post-featured-image">
-		<?php
-		 if ( has_post_thumbnail()): ?>
-		<div class="single-featured-image">
-			<?php amp_featured_image(); ?>
-		</div><!-- /.single-featured-image -->
-		<?php endif; ?>
+<div class="amp-single">
+	<div class="single-bg">
+		<div class="amp-single-featured-img">
+			<?php
+			 if ( has_post_thumbnail()): ?>
+				<div class="single-featured-img">
+					<?php amp_featured_image(); ?>
+				</div><!-- /.single-featured-image -->
+			<?php endif; ?>
 		</div>
 	</div><!-- /.single-background -->
 	<div class="cntr">
-		<div class="single-post-title">
+		<div class="single-title">
 			<?php amp_title();
 			global $redux_builder_amp;
 			if(isset($redux_builder_amp['tech-excerpt']) && $redux_builder_amp['tech-excerpt']==1){ amp_excerpt();} ?>
@@ -34,7 +34,7 @@
 			?>
 		</div>
 		<?php }?>
-		<div class="single-post-content">
+		<div class="single-content">
 			<?php amp_content(); ?>
 		</div><!-- /.single-post-content -->
 		<?php 
@@ -45,12 +45,11 @@
 		<?php 
 				global $redux_builder_amp;
 				if(isset($redux_builder_amp['tech-taxonomy']) && $redux_builder_amp['tech-taxonomy']==1){?>
-		<div class="single-post-category-list">
+		
 			<?php amp_categories_list();?>
-		</div><!-- /.single-post-category-list -->
-		<div class="single-post-tags-list">
-		<?php amp_tags_list();?>
-		</div><!-- /.single-post-tags-list -->
+
+			<?php amp_tags_list();?>
+		
 		<?php }?>
 		<div class="single-related-posts">
 			<?php 
@@ -65,7 +64,7 @@
 									);
 			amp_related_posts($argsRelatedPosts); ?>
 		</div><!-- /.related-posts -->
-		<div class="comments-part">
+		<div class="comments">
 			<?php amp_comments();?>
 		</div><!-- /.comments-part -->	
 		<?php //amp_post_navigation();?>
