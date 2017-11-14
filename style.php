@@ -1,7 +1,7 @@
 /**** 
 * AMP Framework Reset
 *****/
-    body{ font-family: 'Open Sans', sans-serif; font-size: 16px; line-height:1.4; }
+    body{ font-family: 'OpenSans'; font-size: 16px; line-height:1.4; }
     ol, ul{ list-style-position: inside }
     p, ol, ul, figure{ margin: 0 0 1em; padding: 0; }
     a, a:active, a:visited{ 
@@ -19,6 +19,33 @@
     blockquote p:last-child {margin-bottom: 0;}
     .amp-wp-unknown-size img {object-fit: contain;}
     .amp-wp-enforced-sizes{ max-width: 100% }
+
+/* Font Family */
+@font-face {
+  font-family: 'OpenSans';
+  font-style: normal;
+  font-weight: 400;
+    src:  local('OpenSans'), local('OpenSans-Regular'), url('<?php echo plugin_dir_url(__FILE__) ?>fonts/OpenSans-Regular.ttf');
+}
+@font-face {
+  font-family: 'OpenSans';
+  font-style: normal;
+  font-weight: 300;
+    src:  local('OpenSans Light'), local('OpenSans-Light'), url('<?php echo plugin_dir_url(__FILE__) ?>fonts/OpenSans-Light.ttf');
+}
+@font-face {
+    font-family: 'OpenSans';
+     font-style: normal;
+    font-weight: 600;
+    src:  local('OpenSans Bold'), local('OpenSans-Bold'), url('<?php echo plugin_dir_url(__FILE__) ?>fonts/OpenSans-Bold.ttf');
+}
+@font-face {
+  font-family: 'OpenSans';
+  font-style: normal;
+  font-weight: 700;
+    src:  local('OpenSans ExtraBold'), local('OpenSans-ExtraBold'), url('<?php echo plugin_dir_url(__FILE__) ?>fonts/OpenSans-ExtraBold.ttf');
+}
+
     /* Image Alignment */
     .alignright {
         float: right;
@@ -130,13 +157,11 @@
     .amp-main-menu > ul > li > a{
         color:#ffffff;
         font-size:15px;
-        font-family: 'Open Sans', sans-serif;
         font-weight:500;
         letter-spacing:0.5px;
     }
     .amp-menu li.menu-item-has-children > ul > li{
         font-size:13px;
-        font-family: 'Open Sans', sans-serif;
         font-weight:300;
         letter-spacing:0.5px;
         width:85%;
@@ -413,7 +438,6 @@
         font-size: 27px;
         margin: 0;
         line-height: 1.27;
-        font-family: 'Open Sans', sans-serif;
         font-weight: 500;
     }
     .featured-image-post-content h2 a{
@@ -523,7 +547,6 @@
     font-size: 18px;
     line-height: 23px;
     margin: 0;
-    font-family: 'Open Sans',sans-serif;
     font-weight: 400;
 }
 .featured-image-small-post-content .loop-title a, .featured-without-image-post-content .loop-title a{
@@ -546,7 +569,6 @@
     margin-right: 5px;
     border-radius: 3px;
     font-size: 10px;
-    font-family: 'Open Sans',sans-serif;
     font-weight: 400;
     text-transform: uppercase;
 }
@@ -565,7 +587,6 @@
 *****/
 .loop-pagination .right, .loop-pagination .left{
     font-size: 13px;
-    font-family: 'Open Sans', sans-serif;
     margin: 0 auto;
     text-align: center;
     border-radius: 3px;
@@ -722,7 +743,6 @@
 }
 .single-post-title p{
     font-size: 20px;
-    font-family: 'Open Sans',sans-serif;
     color: #000;
     margin-top: 6px;
     font-weight: 400;
@@ -881,7 +901,6 @@
 .comments-part  .amp-comment-button{
     background-color: #B80000;
     font-size: 13px;
-    font-family: 'Open Sans',sans-serif;
     float: none;
     width: 100%;
     margin: 0 auto;

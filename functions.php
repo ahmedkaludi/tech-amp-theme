@@ -77,4 +77,4 @@ function my_custom_class_withoutimage($previousClaases){
     return  $previousClaases;
 }
 
-amp_font('https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600,700|Open+Sans:300,400,600,700');
+// amp_font('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700');
