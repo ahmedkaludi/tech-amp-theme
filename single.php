@@ -40,7 +40,7 @@
 		<?php 
 				global $redux_builder_amp;
 				if(isset($redux_builder_amp['tech-post-pagination']) && $redux_builder_amp['tech-post-pagination']==1){
-					amp_post_navigation();
+					
 				}?>
 		<?php 
 				global $redux_builder_amp;

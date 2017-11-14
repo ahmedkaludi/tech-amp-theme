@@ -34,17 +34,18 @@
     src:  local('OpenSans Light'), local('OpenSans-Light'), url('<?php echo plugin_dir_url(__FILE__) ?>fonts/OpenSans-Light.ttf');
 }
 @font-face {
-    font-family: 'OpenSans';
-     font-style: normal;
-    font-weight: 600;
-    src:  local('OpenSans Bold'), local('OpenSans-Bold'), url('<?php echo plugin_dir_url(__FILE__) ?>fonts/OpenSans-Bold.ttf');
-}
-@font-face {
   font-family: 'OpenSans';
   font-style: normal;
-  font-weight: 700;
-    src:  local('OpenSans ExtraBold'), local('OpenSans-ExtraBold'), url('<?php echo plugin_dir_url(__FILE__) ?>fonts/OpenSans-ExtraBold.ttf');
+  font-weight: 600;
+    src:  local('OpenSans Semibold'), local('OpenSans-Semibold'), url('<?php echo plugin_dir_url(__FILE__) ?>fonts/OpenSans-Semibold.ttf');
 }
+@font-face {
+    font-family: 'OpenSans';
+     font-style: normal;
+    font-weight: 700;
+    src:  local('OpenSans Bold'), local('OpenSans-Bold'), url('<?php echo plugin_dir_url(__FILE__) ?>fonts/OpenSans-Bold.ttf');
+}
+
 
     /* Image Alignment */
     .alignright {
@@ -452,7 +453,7 @@
         line-height: 0;
         font-size: 14px;
         display: block;
-        font-weight: 700;
+        font-weight: 600;
         top: 8px;
         color: #fff;
         position: relative;
@@ -514,7 +515,7 @@
     right:0;
     top:0;
     bottom:0;
-    background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0% , rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.9) 65%) repeat scroll 0 0;
+    background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(0, 0, 0, 0.90) 0% , rgba(0, 0, 0, 0) 35%, rgba(0, 0, 0, 1) 200%) repeat scroll 0 0
 }
 .single-post-featured-image{
     width:100%;
@@ -554,6 +555,9 @@
 }
 .featured-image-small-post-content .loop-category {
     margin-bottom: 4px;
+}
+.featured-image-small-post-content ul li:last-child{
+    margin-right:0;
 }
 .small-post-list{
     display:flex;
@@ -709,82 +713,88 @@
 .single-post-title{
     margin-top:15px;
 }
-.single-post-content p{
-    font-size: 15px;
-    line-height: 23px;
+.single-post-content{
+    display: inline-block;
+    width: 100%;
+    margin-top: 20px;
+    font-size: 16px;
+    line-height: 1.6;
     color: #000;
+}
+.single-post-content amp-img{
+    margin-bottom:20px;
 }
 .amp-author amp-img{
     border-radius:50%;
 }
 .posted-time{
-    display:block;
-    font-size:14px;
+    display: block;
+    font-size: 11px;
+    color: #555;
+    margin-top: 3px;
 }
-.amp-single-page .post-author-info .amp-author{
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 12px;
-} 
 .post-author .amp-author amp-img{
     float:left;
     border-radius: 50%;
     margin-right: 15px;
 }
 .amp-single-page .author-name {
-    font-size: 14px;
+    font-size: 13px;
     display: block;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #444;
+    position: relative;
 }
 .amp-single-page .author-name a{
-    font-size:14px;
-    font-weight:600;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #444;
 }
 .posted-author-image .amp-author{
     width:100%;
 }
 .single-post-title p{
-    font-size: 20px;
-    color: #000;
-    margin-top: 6px;
-    font-weight: 400;
+    font-size: 16px;
+    color: #333;
+    margin-top: 15px;
+    font-style: italic;
     line-height: 1.5;
 }
 .amp-author amp-img{
     float:left;
     margin-right:10px;
 }
-.amp-author span a{
+.loop-wrapper .amp-author span a{
     font-size: 10px;
     color: #333;
     font-weight: 500;
     text-transform:uppercase;
 }
-.single-post-content{
-    display:inline-block;
-    width:100%;
-    margin-top:15px;
-}
-.single-post-category-list .amp-category, .single-post-tags-list .amp-tags{
+.amp-category, .amp-tags{
     width: 100%;
     display: inline-block;
     margin-top: 25px;
     border-top: 1px solid #eee;
     padding-top: 17px;;
 }
-.single-post-category-list .amp-category > span, .single-post-tags-list .amp-tags > span{
+.amp-category > span, .amp-tags > span{
     display: block;
     text-transform: uppercase;
     font-size: 15px;
-    margin-bottom: 8px;
+    margin-bottom: 4px;
+    color: #666;
 }
-.single-post-category-list .amp-category span a, .single-post-tags-list .amp-tags span a{
+.amp-category span a, .amp-tags span a{
     float: left;
     font-size: 12px;
     padding: 6px 10px;
-    border: 1px solid #BDBDBD;
+    border: 1px solid #ccc;
     border-radius: 3px;
     margin: 5px 5px 0px 0px;
     text-transform: none;
-    color: #777;
+    color: #333;
     font-weight: 400;
 }
 .single-related-posts {
@@ -792,33 +802,39 @@
 }
  .single-related-posts h3{
     margin: 0;
-    font-size: 15px;
-    padding-bottom: 10px;
     border-bottom: 2px solid #eee;
-    font-weight: bold;
-    margin-bottom:20px;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 15px;
+    color: #444;
+    margin-bottom: 18px;
 }
 .single-related-posts h3:after{
     content: "";
     display: block;
-    width: 92px;
+    width: 105px;
+    border-bottom: 2px solid rgba(255,189,0,1);
+    position: relative;
+    top: 2px;
     border-bottom: 2px solid 
     <?php if($redux_builder_amp['tech-color-scheme']['rgba']){ echo $redux_builder_amp['tech-color-scheme'] ['rgba'] ?>;
         <?php } else { ?> #da0000; <?php } ?>
-    position: relative;
-    top: 12px;
 }
 .single-related-posts .amp-related-posts li{
     margin-bottom:20px;
     width:100%;
-}
-.single-related-posts .amp-related-posts li .related_link{
-    font-size: 16px;
-    line-height: 22px;
+    font-size: 18px;
+    line-height: 23px;
     font-weight: 400;
 }
 .single-related-posts .amp-related-posts li .related_link a{
     color:#000;
+}
+.single-related-posts .amp-related-posts li .amp-author span a {
+    font-size: 10px;
+    color: #333;
+    font-weight: 500;
+    text-transform: uppercase;
 }
 .single-related-posts .posted-author-details{
     margin-top:5px;
@@ -838,18 +854,25 @@
 * Archive
 *****/
 .amp-archive{
-    margin-top:50px;
+    margin-top:20px;
 }
 .amp-archive-title, .amp-archive .amp-loop-label{
-    margin:0;
-    padding-bottom:15px;
+    margin: 0;
+    padding-bottom: 10px;
+    text-align: center;
+    font-size: 16px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 25px;
+    display: block;
+    font-weight: 600;
+    color: #222;
 }
 .amp-archive-desc{
     padding-bottom: 15px;
     margin-top: -10px;
 }
 .amp-archive .featured-small-posts{
-    margin-top:15px;
+    margin-top:0px;
     display:inline-block;
 }
 .amp-related-posts ul {
@@ -898,7 +921,7 @@
     clear:both;
     margin-top:10px;
 }
-.comments-part  .amp-comment-button{
+.amp-comment-button{
     background-color: #B80000;
     font-size: 13px;
     float: none;
@@ -907,12 +930,14 @@
     text-align: center;
     border-radius: 3px;
     font-weight: 600;
-    width:250px;
+    width: 100%;
 }
-.comments-part .amp-comment-button a{
+.amp-comment-button a{
     color: #ffffff;
     display: block;
-    padding: 7px 0px 8px 0px;
+    font-weight: 500;
+    font-size: 17px;
+    padding: 9px 0px 10px 0px;
 }
 .comments-part h3{
     margin: 0;
@@ -1020,6 +1045,15 @@
 .rights-reserved a{
     padding-left:3px;
 }
+
+@media(max-width:320px){
+.featured-image-post-content h2 {
+    font-size: 24px;
+    line-height: 1.15;
+}
+
+}
+
 /****
 * RTL Styles
 *****/

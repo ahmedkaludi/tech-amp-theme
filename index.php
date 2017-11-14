@@ -32,7 +32,9 @@
 					amp_loop_author($args); ?>
 		    </div><!-- /.featured-image-small-post-content -->
 		</div>
-		<?php endwhile; amp_loop('end');  amp_pagination(); ?>
+		<?php endwhile; amp_loop('end');  
+		
+		amp_pagination(); ?>
 	</div><!-- /.featured-small-posts -->
 </div><!-- /.container -->
 <?php amp_footer(); ?>
