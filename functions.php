@@ -30,21 +30,10 @@ add_amp_theme_support('AMP-related-posts');
 add_amp_theme_support('AMP-post-pagination');
 
 function headerbody_classes(){
-if (get_query_var( 'paged' ) ) {
-    $paged = get_query_var('paged');
-} elseif ( get_query_var( 'page' ) ) {
-    $paged = get_query_var('page');
-} else {
-    $paged = 1;
-} 
-if( $paged ==1 && (is_home() || is_front_page()) ) {
-    $args = array('post_to_show'=>1);
-        while(amp_loop('start',$args)): 
-            if(! has_post_thumbnail() ){
-            add_filter("ampforwp_body_class",'my_custom_class_withoutimage');
-            }
-         endwhile;  amp_loop('end');  
-        amp_reset_loop();
+
+
+if ( empty( get_post_thumbnail_id(get_the_ID() ) ) ){
+    add_filter("ampforwp_body_class",'my_custom_class_withoutimage');
 }
 
 if( $paged >1 && is_home() || is_front_page()){
