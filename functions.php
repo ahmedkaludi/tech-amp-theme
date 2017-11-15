@@ -57,6 +57,9 @@ if(is_single()){
         add_filter("ampforwp_body_class",'my_custom_class_single_img');
     }
 }
+if(ampforwp_is_front_page()){
+    add_filter("ampforwp_body_class",'my_custom_class_single_frontpage');
+}
 
 }
 function my_custom_class_next_pages($previousClaases){
@@ -77,4 +80,8 @@ function my_custom_class_withoutimage($previousClaases){
     return  $previousClaases;
 }
 
+function my_custom_class_single_frontpage($previousClaases){
+    $previousClaases[] = 'blog_frontpage';
+    return  $previousClaases;
+}
 

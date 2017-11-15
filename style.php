@@ -700,7 +700,7 @@ a.lb-x:after {
     top: 2px;
 }
 <?php } 
-if(is_singular() || ampforwp_is_front_page() ){ ?>
+if(is_single() || ampforwp_is_front_page() ){ ?>
 /****
 * Single
 *****/
@@ -1010,6 +1010,17 @@ if(is_singular() || ampforwp_is_front_page() ){ ?>
     font-size: 14px;
     color: #000;
     line-height: 21px;
+}
+
+/** Single Pages **/
+.blog_frontpage .featured-img-w{
+    background:#000;
+}
+.blog_frontpage .header{
+    padding:10px 0px;
+}
+.blog_frontpage .amp-single {
+    top: 0;
 }
 <?php } ?>
 
