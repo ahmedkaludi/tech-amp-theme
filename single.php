@@ -51,7 +51,7 @@
 			<?php amp_tags_list();?>
 		
 		<?php }?>
-		<div class="single-related-posts">
+		<div class="single-rlp">
 			<?php 
 			$argsRelatedPosts = array(
 									'show_excerpt'=>false,
@@ -64,7 +64,7 @@
 									);
 			amp_related_posts($argsRelatedPosts); ?>
 		</div><!-- /.related-posts -->
-		<div class="comments">
+		<div class="cmts">
 			<?php amp_comments();?>
 		</div><!-- /.comments-part -->	
 		<?php //amp_post_navigation();?>
