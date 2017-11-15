@@ -46,6 +46,7 @@ if( $paged ==1 && (is_home() || is_front_page()) ) {
          endwhile;  amp_loop('end');  
         amp_reset_loop();
 }
+
 if( $paged >1 && is_home() || is_front_page()){
     add_filter("ampforwp_body_class",'my_custom_class_next_pages');
 }
