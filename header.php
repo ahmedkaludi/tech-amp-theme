@@ -48,6 +48,7 @@ amp_header_core(); ?>
     </div>
 
 <?php
+    if(ampforwp_is_home() && !ampforwp_is_front_page() && !is_single() ){
 ?>
 <div class="home-bg">
     <div class="featured-img-bp">
