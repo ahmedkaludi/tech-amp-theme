@@ -48,7 +48,7 @@ amp_header_core(); ?>
     </div>
 
 <?php
-    if(is_home() || is_front_page()){
+    if(is_home() || !is_front_page()){
 ?>
 <div class="home-bg">
     <div class="featured-img-bp">

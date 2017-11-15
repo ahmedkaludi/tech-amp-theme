@@ -411,7 +411,7 @@ a.lb-x:after {
     padding-left:3px;
 }
 
-<?php if(is_home() || is_archive()){ ?>
+<?php if(ampforwp_is_home() || is_archive()){ ?>
 /**** 
 * Loop
 *****/
@@ -700,7 +700,7 @@ a.lb-x:after {
     top: 2px;
 }
 <?php } 
-if(is_single()){?>
+if(is_singular() || ampforwp_is_front_page() ){ ?>
 /****
 * Single
 *****/
@@ -746,6 +746,11 @@ if(is_single()){?>
 .single-postamp-single .featured-img-w{
     margin-bottom:0px;
 }
+<?php if(is_single() || $redux_builder_amp['enable-amp-ads-1'] == false){ ?>
+.single-postamp-single .featured-img-w{
+    background:#000;
+}
+<?php } ?>
 .featured-sp{
     width:100%;
     display:inline-block;
@@ -1007,63 +1012,7 @@ if(is_single()){?>
     line-height: 21px;
 }
 <?php } ?>
-/*** singular pages ***/
 
-.amp-single-page .no-img-bg{
-    background: #000;
-    width:100%;
-    display:inline-block;
-}
-.amp-single-page .header {
-    padding: 10px 0px;
-}
-.amp-single-page .single-title h1{
-    margin:0;
-    font-size: 40px;
-    line-height: 45px;
-    color: #000000;
-    font-weight: 300;
-}
-.amp-single-page .single-title p {
-    font-size: 16px;
-    color: #333;
-    margin-top: 15px;
-    font-style: italic;
-    line-height: 1.5;
-}
-.amp-single-page .amp-author amp-img {
-    float: left;
-    margin-right: 10px;
-    border-radius: 50%;
-}
-.amp-single-page .amp-single .author-name {
-    font-size: 13px;
-    display: block;
-    font-weight: 600;
-    text-transform: uppercase;
-    color: #444;
-    position: relative;
-}
-.amp-single-page .amp-single .author-name a {
-    font-size: 13px;
-    font-weight: 600;
-    text-transform: uppercase;
-    color: #444;
-}
-.amp-single-page .posted-time {
-    display: block;
-    font-size: 11px;
-    color: #555;
-    margin-top: 3px;
-}
-.amp-single-page .single-content{
-    display: inline-block;
-    width: 100%;
-    margin-top: 20px;
-    font-size: 16px;
-    line-height: 1.6;
-    color: #000;
-}
 
 @media(max-width:320px){
 .featured-img-cnt h2 {
@@ -1078,17 +1027,32 @@ if(is_single()){?>
     margin:0 auto;
     text-align:center;
 }
-.amp_ad_1{
+.amp-home .amp_ad_1{
     margin: 15px 0px -5px 0px;
+    background:red;
 }
-.amp-ad-wrapper .amp-ad-2{
+.single-postamp-single .amp_ad_1{
+    margin: 15px 0px 60px 0px;
+    background:red;
+}
+.amp-home .amp-ad-wrapper .amp-ad-2{
     margin:15px 0px -15px 0px;
+    background:red;
+}
+.single-postamp-single .amp-ad-wrapper .amp-ad-2 {
+    margin: -25px 0px -15px 0px;
+    background: red;
+}
+.amp-ad-wrapper .amp-ad-3, .amp-ad-wrapper .amp-ad-4{
+    background:red;
 }
 .amp-ad-wrapper .amp-ad-5{
-    margin-top:15px 0px -10px 0px;
+    margin:15px 0px -10px 0px;
+    background:red;
 }
 .amp-ad-wrapper .amp-ad-6{
     margin-bottom:20px;
+    background:red;
 }
 
 
