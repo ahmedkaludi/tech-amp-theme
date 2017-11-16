@@ -66,7 +66,7 @@ amp_header_core(); ?>
         <div class="loop-post">
             <?php 
             //array('thumbnail', 'medium', 'medium_large', 'large');
-            $args = array("tag"=>'div',"tag_class"=>'image-container','image_size'=>'large', 'responsive'=> true); ?>
+            $args = array("tag"=>'div',"tag_class"=>'image-container','image_size'=>'medium_large', 'responsive'=> true); ?>
             <?php if ( has_post_thumbnail()): ?>
             <div class="featured-img">
                 <?php amp_loop_image($args); ?>
