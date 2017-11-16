@@ -68,7 +68,9 @@ amp-carousel>amp-img>img{object-fit:contain}
 .menu{ margin-top:50px;}
 .amp-sidebar-close{float:right;position:relative;right:22px;cursor:pointer}
 .amp-sidebar-toggle{cursor:pointer;display:block}
-
+.menu .sub-menu{
+    padding-left:20px;
+}
 /**** 
 * Header -logo
 *****/
