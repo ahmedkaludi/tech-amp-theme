@@ -512,10 +512,7 @@ a.lb-x:after {
     left: 12px;
     right: 10px;
 }
-.featured-no-img-cnt{
-    width:100%;
-    margin-top:50px;
-}
+.featured-no-img-cnt{ width:100%; margin-top:50px;}
 .loop-wrapper .loop-post .featured-img{
     position:relative;
     width:100%;
@@ -525,7 +522,7 @@ a.lb-x:after {
 }
 .loop-wrapper .loop-post .featured-img .loop-img{
     width: 100%;
-    background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0% , rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.9) 65%) repeat scroll 0 0;
+    background: rgba(0,0,0,0) linear-gradient(to bottom,rgba(0,0,0,0.7) 0%,rgba(0,0,0,0) 30%,rgba(0,0,0,0.70) 65%) repeat scroll 0 0;
 }
 .featured-img-cnt .amp-author{
     font-size:13px;
@@ -540,7 +537,7 @@ a.lb-x:after {
     font-weight: 500;
 }
 .featured-img-sp-cnt .amp-author{
-    margin-top: 4px;
+    margin-top: 0px;
 }
 .featured-img-sp .loop-img{
     width:90px;
@@ -560,6 +557,8 @@ a.lb-x:after {
 }
 .featured-img-sp-cnt .loop-category {
     margin-bottom: 4px;
+    position:relative;
+    top:-4px;
 }
 .featured-img-sp-cnt ul li:last-child{
     margin-right:0;
@@ -1109,7 +1108,19 @@ background-color:<?php echo $redux_builder_amp['tech-color-scheme'] ['rgba'] ?>;
     font-size: 24px;
     line-height: 1.15;
 }
-
+.loop-pagination .right a, .loop-pagination .left a {
+    padding: 7px 8px 8px 7px;
+}
+.loop-pagination .right, .loop-pagination .left {
+    font-size: 12px;
+}
+.loop-pagination .left a:before{
+    margin-right:4px;
+}
+.loop-pagination .right a:after{
+    margin-left:4px;
+    top:3px;
+}
 }
 
 /*** ADS Code ***/
