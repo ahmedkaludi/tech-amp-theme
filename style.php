@@ -652,13 +652,15 @@ a.lb-x:after {
 }
 .loop-pagination .right{
     float:right;
-     <?php if($redux_builder_amp['tech-color-scheme']['rgba']){?>
-    background-color:<?php echo $redux_builder_amp['tech-color-scheme'] ['rgba'] ?>;
+     <?php if($redux_builder_amp['tech-color-scheme']['color']){?>
+    background-color:<?php echo $redux_builder_amp['tech-color-scheme'] ['color'] ?>;
         <?php }?>
 }
 .loop-pagination .left{
     float:left;
-    background-color: #B80000;
+ <?php if($redux_builder_amp['tech-color-scheme']['color']){?>
+background-color:<?php echo $redux_builder_amp['tech-color-scheme'] ['color'] ?>;
+ <?php }?>
 }
 .loop-pagination .right a, .loop-pagination .left a{
     color:#ffffff;
