@@ -54,7 +54,7 @@ if ( ! function_exists( 'ampforwp_tech_theme_settings' ) ) {
                         'subtitle'  => __('Choose the color for Category & Tags','amptechtheme'),
                         'type'      => 'color_rgba',
                         'default'   => array(
-                             'color'     => '#90A4AE',
+                             'color'     => '#a6b6be;',
                          ),
                 ),
 
@@ -78,13 +78,6 @@ if ( ! function_exists( 'ampforwp_tech_theme_settings' ) ) {
                         'type'  => 'switch',
                         'title' => __('Author Box', 'amptechtheme'),
                         'subtitle'  => __('Switch to show/hide author box', 'amptechtheme'),
-                        'default'   => 1
-                ),
-                  array(
-                        'id'    => 'tech-post-pagination',
-                        'type'  => 'switch',
-                        'title' => __('Post Pagination', 'amptechtheme'),
-                        'subtitle'  => __('Eswitch to show/hide Pagination', 'amptechtheme'),
                         'default'   => 1
                 ),
                    array(

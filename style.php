@@ -556,9 +556,7 @@ a.lb-x:after {
     font-weight: 400;
 }
 .featured-img-sp-cnt .loop-title a, .featured-no-img-cnt .loop-title a{
- <?php if($redux_builder_amp['tech-color-scheme']['rgba']){?>
-        color:<?php echo $redux_builder_amp['tech-color-scheme'] ['rgba'] ?>;
-        <?php } else { ?> color:<?php } ?>
+   color:#000;
 }
 .featured-img-sp-cnt .loop-category {
     margin-bottom: 4px;
@@ -586,10 +584,11 @@ a.lb-x:after {
 .featured-img-sp-cnt ul li a, .featured-no-img-cnt ul li a, .featured-img-cnt ul li a{
     color: #ffffff;
     padding: 1px 7px 2px 7px;
+    text-shadow: 1px 1px 1px #0000002e;
     display:inline-block;
     <?php if($redux_builder_amp['tech-taxonomy-color-scheme']['rgba']){?>
    background:<?php echo $redux_builder_amp['tech-taxonomy-color-scheme'] ['rgba'] ?>;
-    <?php } else { ?> background:rgba(69, 90, 100, 0.7); <?php } ?>
+    <?php } ?>
     border-radius:60px;
 }
 .amp-home .posted-author-details .posted-time{
@@ -654,7 +653,9 @@ a.lb-x:after {
 }
 .loop-pagination .right{
     float:right;
-    background-color: #B80000;
+     <?php if($redux_builder_amp['tech-color-scheme']['rgba']){?>
+    background-color:<?php echo $redux_builder_amp['tech-color-scheme'] ['rgba'] ?>;
+        <?php }?>
 }
 .loop-pagination .left{
     float:left;
@@ -960,7 +961,9 @@ if(is_single() || ampforwp_is_front_page() ){ ?>
     margin:20px 20px 10px 20px
 }
 .amp-comment-button{
-    background-color: #B80000;
+ <?php if($redux_builder_amp['tech-color-scheme']['rgba']){?>
+background-color:<?php echo $redux_builder_amp['tech-color-scheme'] ['rgba'] ?>;
+        <?php }?>
     font-size: 13px;
     float: none;
     width: 100%;

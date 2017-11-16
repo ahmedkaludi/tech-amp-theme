@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: Blogging Theme for AMP
+Plugin Name: Tech Blogging Theme for AMP
 Plugin URI: https://wordpress.org/plugins/accelerated-mobile-pages/
 Description: Create AMP Themes easily with help of AMP Framework
 Version: 1.0
