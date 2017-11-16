@@ -410,8 +410,20 @@ a.lb-x:after {
 .rights-reserved a{
     padding-left:3px;
 }
-
-<?php if(ampforwp_is_home() || is_archive()){ ?>
+.home_newpage .no-img-bg{
+    margin-bottom:0;
+}
+.home_newpage .home-bg{
+    margin-top:0
+}
+<?php if(ampforwp_is_home() || is_front_page() ) { ?>
+.no-img-bg{
+    margin-bottom: -26px;
+    display: inline-block;
+    width: 100%;
+}
+<?php } ?>
+<?php if(ampforwp_is_home() || is_archive() || is_search()){ ?>
 /**** 
 * Loop
 *****/
@@ -436,13 +448,15 @@ a.lb-x:after {
 }    
 .home-bg{
     position: relative;
-    top: -50px;
+    top: 0px;
     background: #222;
     <?php if(isset($redux_builder_amp['header-type']) && $redux_builder_amp['header-type']=='2'){?>
             display:none;
     <?php } ?>
+    margin-top:-26px;
     z-index:0;
 }
+
 .without_image .header{
     margin-bottom:20px;
 }
@@ -480,7 +494,9 @@ a.lb-x:after {
     line-height:0;
 }
 .featured-img-w{
-    margin-bottom:-50px;
+    margin-bottom:0px;
+    display: inline-block;
+    width: 100%;
 }
 .featured-img-bp{
     max-width: 600px;
@@ -505,6 +521,7 @@ a.lb-x:after {
     width:100%;
     display:inline-block;
     z-index:0;
+    bottom:-4px;
 }
 .loop-wrapper .loop-post .featured-img .loop-img{
     width: 100%;
