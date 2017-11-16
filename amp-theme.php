@@ -2,12 +2,12 @@
 /*
 Plugin Name: Tech Blogging Theme for AMP
 Plugin URI: https://wordpress.org/plugins/accelerated-mobile-pages/
-Description: Create AMP Themes easily with help of AMP Framework
+Description: Create a Tech Blogging AMP theme with a single plugin.
 Version: 1.0
 Author: AMPforWP Team
 Author URI: http://ampforwp.com/amp-theme-framework
 License: GPL2
-AMP: Tech AMP Theme 
+AMP: Tech Blogging AMP Theme 
 */
 
 // Exit if accessed directly.

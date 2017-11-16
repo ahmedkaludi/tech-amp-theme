@@ -3,7 +3,7 @@ if ( ! function_exists( 'ampforwp_tech_theme_settings' ) ) {
 	function ampforwp_tech_theme_settings($sections){
                 
 		$sections[] = array(
-		      'title'      => __( 'Tech Magazine', 'amptechtheme' ),
+		      'title'      => __( 'Tech Blogging AMP Theme', 'amptechtheme' ),
 		      'icon'       => 'el el-idea',
 			  'id'         => 'ampforwp-tech-theme-subsection',
 		      'desc'       => " ",
