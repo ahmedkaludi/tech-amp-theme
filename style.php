@@ -469,7 +469,7 @@ a.lb-x:after {
 }
 .featured-img-cnt h2{
     font-size: 27px;
-    margin: 0;
+    margin: 10px 0px 0px 0px;
     line-height: 1.27;
     font-weight: 500;
 }
@@ -585,8 +585,8 @@ a.lb-x:after {
     padding: 1px 7px 2px 7px;
     text-shadow: 1px 1px 1px #0000002e;
     display:inline-block;
-    <?php if($redux_builder_amp['tech-taxonomy-color-scheme']['rgba']){?>
-   background:<?php echo $redux_builder_amp['tech-taxonomy-color-scheme'] ['rgba'] ?>;
+    <?php if($redux_builder_amp['tech-taxonomy-color-scheme']['color']){?>
+   background:<?php echo $redux_builder_amp['tech-taxonomy-color-scheme'] ['color'] ?>;
     <?php } ?>
     border-radius:60px;
 }
