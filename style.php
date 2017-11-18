@@ -60,17 +60,17 @@ amp-carousel>amp-img>img{object-fit:contain}
 * AMP Navigation Menu with Dropdown Support
 *****/
 .menu>ul>li>a{color:#fff;font-size:15px;font-weight:500;letter-spacing:.5px}
-.amp-menu li.menu-item-has-children>ul>li{font-size:13px;font-weight:300;letter-spacing:.5px;width:85%}
-.menu ul li:active a,.menu ul li:focus a,.menu ul li:hover a{color:#fff;background:#000}
-.menu ul li:active a,.menu ul li:focus a,.menu ul li:hover a{color:#fff;background:#000}
+.amp-menu li.menu-item-has-children>ul>li{font-size:13px;font-weight:300;letter-spacing:.5px;width:100%}
+.menu ul li:active a,.menu ul li:focus a,.menu ul li:hover a{color:#fff;background:transparent}
 .menu ul li.menu-item-has-children:after{content:"";background:url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAxMjkgMTI5IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxMjkgMTI5IiB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4Ij4KICA8Zz4KICAgIDxwYXRoIGQ9Im0xMjEuMywzNC42Yy0xLjYtMS42LTQuMi0xLjYtNS44LDBsLTUxLDUxLjEtNTEuMS01MS4xYy0xLjYtMS42LTQuMi0xLjYtNS44LDAtMS42LDEuNi0xLjYsNC4yIDAsNS44bDUzLjksNTMuOWMwLjgsMC44IDEuOCwxLjIgMi45LDEuMiAxLDAgMi4xLTAuNCAyLjktMS4ybDUzLjktNTMuOWMxLjctMS42IDEuNy00LjIgMC4xLTUuOHoiIGZpbGw9IiNEODAwMjciLz4KICA8L2c+Cjwvc3ZnPgo=) no-repeat;background-size:16px;display:inline-block;width:16px;height:16px;top:10px}
 .menu ul li.menu-item-has-children:hover:after{-moz-transform:rotate(180deg);-o-transform:rotate(180deg);-webkit-transform:rotate(180deg);-ms-transform:rotate(180deg);transform:rotate(180deg);top:-10px;right:20px}
 .menu{ margin-top:50px;}
 .amp-sidebar-close{float:right;position:relative;right:22px;cursor:pointer}
 .amp-sidebar-toggle{cursor:pointer;display:block}
-.menu .sub-menu{
-    padding-left:20px;
-}
+.menu .sub-menu{padding-left:20px;}
+.menu .amp-menu li:hover li:hover > a{background:transparent;}
+.menu .amp-menu li.menu-item-has-children:hover > ul{z-index:9;}
+
 /**** 
 * Header -logo
 *****/
@@ -119,6 +119,8 @@ a.lb-x:after{content:"";display:block;height:30px;width:1px;background:#fff;posi
 .rights-reserved a{padding-left:3px}
 .home_newpage .no-img-bg{margin-bottom:0}
 .home_newpage .home-bg{margin-top:0}
+.footer .amp-menu li .sub-menu li{display:none;}
+.footer .amp-menu li.menu-item-has-children:after{display:none;}
 
 <?php if(ampforwp_is_home() || is_front_page() ) { ?>
 .no-img-bg{margin-bottom:-26px;display:inline-block;width:100%}
