@@ -14,4 +14,4 @@ AMP: Tech Blogging AMP Theme
 if ( ! defined( 'ABSPATH' ) ) exit;
 // Define the Folder of the theme.
 define('AMPFORWP_TECH_MAGAZINE_THEME', plugin_dir_path( __FILE__ )); 
-require_once( AMPFORWP_TECH_MAGAZINE_THEME . '/tech_magazine_settings.php');
+require_once( AMPFORWP_TECH_MAGAZINE_THEME . 'tech_magazine_settings.php');

@@ -11,3 +11,4 @@
 		<?php amp_non_amp_link(); ?>
 	</div><!-- /.container -->
 </div>
+<?php amp_footer_core(); ?>
