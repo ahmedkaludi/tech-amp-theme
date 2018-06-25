@@ -3,7 +3,7 @@
 Plugin Name: Tech Blogging Theme for AMP
 Plugin URI: https://ampforwp.com/demo/blogging-theme/amp/
 Description: Create a Tech Blogging AMP theme with ease.
-Version: 1.0
+Version: 1.1
 Author: AMPforWP Team
 Author URI: https://ampforwp.com/
 License: GPL2
