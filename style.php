@@ -228,7 +228,7 @@ if(is_single() || ampforwp_is_front_page() ){ ?>
 /****
 * Single
 *****/
-.single-postamp-single .header{padding:10px 0}
+.single-post.amp-single .header{padding:10px 0}
 .amp-related-posts ul{list-style-type:none}
 .amp-related-posts ul li{display:inline-block;line-height:1.3;margin-bottom:5px}
 .amp-related-posts amp-img{float:left;width:100px;margin:0 10px 0 0}
